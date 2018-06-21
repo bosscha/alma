@@ -1,0 +1,34 @@
+# Example of input file for arrayCombine.py
+#
+
+#project
+project = cy3-3
+model = model.in
+declination = -30
+frequency = 100GHz
+
+#1 1st array. array must be the first parameter
+array =  C36-6n.cfg
+duration = 3600s
+weight = 1.
+obsmode = int
+
+#2 2nd array. 
+array = C36-8n.cfg
+duration = 11400s
+weight = 1.
+obsmode = int
+
+
+
+# clean
+image = True
+imsize = 1024
+cell =  0.05arcsec
+niter = 500
+threshold = 0.1mJy
+        
+
+# analysis
+analysis = True
+

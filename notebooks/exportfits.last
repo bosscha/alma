@@ -1,0 +1,14 @@
+taskname           = "exportfits"
+imagename          =  "../../simulations/C43-6+ACA/C43-6+ACA.concat.image"
+fitsimage          =  "../notebooks/products/C43-6+ACA.concat.image.fits"
+velocity           =  False
+optical            =  False
+bitpix             =  -32
+minpix             =  0
+maxpix             =  -1
+overwrite          =  True
+dropstokes         =  False
+stokeslast         =  True
+history            =  True
+dropdeg            =  False
+#exportfits(imagename="../../simulations/C43-6+ACA/C43-6+ACA.concat.image",fitsimage="../notebooks/products/C43-6+ACA.concat.image.fits",velocity=False,optical=False,bitpix=-32,minpix=0,maxpix=-1,overwrite=True,dropstokes=False,stokeslast=True,history=True,dropdeg=False)

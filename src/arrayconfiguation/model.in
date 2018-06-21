@@ -1,0 +1,9 @@
+## Skymodel ##
+
+skymodel = M51ha.fits
+inbright = 1Jy/pixel
+incell = 0.2arcsec
+incenter = 100GHz
+inwidth = 4GHz
+
+mapsize = 40arcsec

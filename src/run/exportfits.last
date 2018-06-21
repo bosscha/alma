@@ -1,0 +1,14 @@
+taskname           = "exportfits"
+imagename          =  "/home/stephane/Science/alma/ArrayConfiguration/simulations/C43-6+ACA/C43-6+ACA.concat.skymodel.flat.regrid.conv"
+fitsimage          =  "/home/stephane/Science/alma/ArrayConfiguration/master/notebooks/products/C43-6+ACA.concat.skymodel.flat.regrid.conv.fits"
+velocity           =  False
+optical            =  False
+bitpix             =  -32
+minpix             =  0
+maxpix             =  -1
+overwrite          =  True
+dropstokes         =  False
+stokeslast         =  True
+history            =  True
+dropdeg            =  False
+#exportfits(imagename="/home/stephane/Science/alma/ArrayConfiguration/simulations/C43-6+ACA/C43-6+ACA.concat.skymodel.flat.regrid.conv",fitsimage="/home/stephane/Science/alma/ArrayConfiguration/master/notebooks/products/C43-6+ACA.concat.skymodel.flat.regrid.conv.fits",velocity=False,optical=False,bitpix=-32,minpix=0,maxpix=-1,overwrite=True,dropstokes=False,stokeslast=True,history=True,dropdeg=False)
