@@ -20,8 +20,8 @@ simDir =  "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy"
 dataDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data" 
 productDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/products"
 
-nsource = 80
-ntrial  = 100
+nsource = 100
+ntrial  = 1000
 
 #### create cl #####################################################################
 
@@ -119,7 +119,8 @@ pads = readPads()
 ## For a random C32-3 we select 32 antennas in the 100 first pads
 pads_3 = pads[3:93]
 arrStd = "alma.cycle1.3"
-
+inttime = "300s"
+  
 for i in range(ntrial):
    
     print("### Test: %d"%(i))
@@ -128,7 +129,7 @@ for i in range(ntrial):
     #####
     project = "arrTarget"
     antcfg = "%s/%s.cfg"%(dataDir,arrStd)
-    inttime = "1h"
+  
     
     simulation(antcfg, project, inttime, True)
         
@@ -150,8 +151,6 @@ for i in range(ntrial):
         f.write(arrRan)   
     f.close()  
      
-
-    inttime = "1h"
     
     simulation(antcfg, project, inttime, True)
         

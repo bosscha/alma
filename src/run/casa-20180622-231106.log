@@ -1,0 +1,1344 @@
+
+2018-06-22 23:11:08	INFO	::casa	
+2018-06-22 23:11:08	INFO	::casa	CASA Version 5.1.2-4  
+2018-06-22 23:11:09	INFO	simalma::::	
+2018-06-22 23:11:09	INFO	simalma::::+	##########################################
+2018-06-22 23:11:09	INFO	simalma::::+	##### Begin Task: simalma            #####
+2018-06-22 23:11:09	INFO	simalma::::	simalma(project="arrTarget",dryrun=False,skymodel="",inbright="",indirection="",
+2018-06-22 23:11:09	INFO	simalma::::+	        incell="",incenter="",inwidth="",complist="source.cl",compwidth="200MHz",
+2018-06-22 23:11:09	INFO	simalma::::+	        setpointings=True,ptgfile="$project.ptg.txt",integration="10s",direction="",mapsize="150arcsec",
+2018-06-22 23:11:09	INFO	simalma::::+	        antennalist="/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg",hourangle="transit",totaltime="300s",tpnant=0,tptime="0s",
+2018-06-22 23:11:09	INFO	simalma::::+	        pwv=5.0,image=True,imsize=750,imdirection="",cell="0.2arcsec",
+2018-06-22 23:11:09	INFO	simalma::::+	        niter=2000,threshold="0.01mJy",graphics="both",verbose=False,overwrite=True)
+2018-06-22 23:11:09	INFO	simalma::::	Project directory, 'arrTarget', already exists.
+2018-06-22 23:11:09	INFO	simalma::::	Removing old project directory 'arrTarget'
+2018-06-22 23:11:10	INFO	simalma::simutil::	============================================================
+2018-06-22 23:11:10	INFO	simalma::simalma::	Checking the sky model
+2018-06-22 23:11:10	INFO	simalma::simutil::	 
+2018-06-22 23:11:10	INFO	simalma::simutil::	You will be simulating only from component list source.cl
+2018-06-22 23:11:10	INFO	simalma::simutil::	Based on the spatial distribution of components, a sky model image will be generated with these parameters:
+2018-06-22 23:11:10	INFO	simalma::simutil::	  image size          = 0.032750000deg
+2018-06-22 23:11:10	INFO	simalma::simutil::	  reference direction = J2000 00:40:00.14328 -049.59.59.730000
+2018-06-22 23:11:10	INFO	simalma::simutil::	and each call to simobserve will chose a skymodel cell size of 1/20 the expected PSF FWHM (to accurately locate components).
+2018-06-22 23:11:10	INFO	simalma::simutil::	Simulation from components-only produces a single channel / continuum observation
+2018-06-22 23:11:10	INFO	simalma::simutil::	  with bandwidth = 200MHz
+2018-06-22 23:11:10	INFO	simalma::simutil::	 
+2018-06-22 23:11:10	INFO	simalma::simutil::	You will be mapping an area of size 150.000000000arcsec,150.000000000arcsec
+2018-06-22 23:11:10	INFO	simalma::simutil::	  primary beam size: 58.229485058arcsec
+2018-06-22 23:11:10	INFO	simalma::simutil::	 
+2018-06-22 23:11:10	INFO	simalma::simutil::	============================================================
+2018-06-22 23:11:10	INFO	simalma::simalma::	You are requesting 1 configurations:
+2018-06-22 23:11:10	INFO	simalma::readantenna::	Reading antenna positions from '/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg'
+2018-06-22 23:11:10	INFO	simalma::readantenna::	Reading antenna positions from '/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg'
+2018-06-22 23:11:10	INFO	simalma::simutil::	  
+2018-06-22 23:11:10	INFO	simalma::simutil::	  /home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg:
+2018-06-22 23:11:10	INFO	simalma::simutil::	    12m ALMA array
+2018-06-22 23:11:10	INFO	simalma::simutil::	    This is a cycle 1 configuration
+2018-06-22 23:11:10	INFO	simalma::simutil::	    approximate synthesized beam FWHM = 2.152540 arcsec
+2018-06-22 23:11:10	INFO	simalma::simutil::	       (at zenith; the actual beam will depend on declination, hourangle, and uv coverage)
+2018-06-22 23:11:10	INFO	simalma::simutil::	    Observation time = 5.000000 min
+2018-06-22 23:11:10	INFO	simalma::simutil::	
+2018-06-22 23:11:10	INFO	simalma::simutil::	============================================================
+2018-06-22 23:11:10	INFO	simalma::simalma::	simalma calls simobserve to simulate each component:
+2018-06-22 23:11:10	INFO	simalma::simutil::	
+2018-06-22 23:11:10	WARN	simalma::simalma::	------------------------------------------------------------
+2018-06-22 23:11:10	WARN	simalma::simalma::	Step 1: simulating 12m ALMA array
+2018-06-22 23:11:10	WARN	simalma::simalma::	------------------------------------------------------------
+2018-06-22 23:11:10	INFO	simalma::simutil::	simobserve(antennalist=/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg, verbose=False, incell='', leakage=0.0, overwrite=True, calflux='0Jy', integration='10s', pointingspacing='0.510929441761PB', sdant=0, complist='source.cl', direction=[''], caldirection='', t_ground=270.0, compwidth='200MHz', sdantlist='', maptype='ALMA', graphics='both', inbright='', inwidth='', skymodel='', thermalnoise='tsys-atm', totaltime='5.000000min', hourangle='transit', ptgfile='$project.ptg.txt', obsmode='int', project='arrTarget', indirection='', user_pwv=5.0, mapsize=['150arcsec', '150arcsec'], incenter='', setpointings=True)
+2018-06-22 23:11:10	INFO	simobserve::readantenna::	Reading antenna positions from '/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg'
+2018-06-22 23:11:10	INFO	simobserve::readantenna::	Reading antenna positions from '/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg'
+2018-06-22 23:11:10	INFO	readantenna::::	Created Paged image 'arrTarget/arrTarget.alma.cycle1.3.compskymodel' of shape [1643, 1643, 1, 1] with float valued pixels.
+2018-06-22 23:11:10	INFO	readantenna::ComponentImager::project	Adding components to image with units [Jy/pixel.pixel]
+2018-06-22 23:11:29	INFO	readantenna::ImageFactory::fromImage	Created image 'arrTarget/arrTarget.alma.cycle1.3.compskymodel.flat' of shape [1643, 1643]
+2018-06-22 23:11:30	INFO	readantenna::image::_adddegaxes 	Creating image 'arrTarget/arrTarget.alma.cycle1.3.compskymodel.flat' of shape [1643, 1643, 1]
+2018-06-22 23:11:30	INFO	simobserve::simobserve::	calculating map pointings centered at J2000 00:40:00.14328 -049.59.59.730000
+2018-06-22 23:11:30	INFO	simobserve::calc_pointings::	using 33 generated pointing(s)
+2018-06-22 23:11:30	INFO	simobserve::simobserve::	center = J2000 00:39:58.80775 -049.59.59.730000
+2018-06-22 23:11:30	INFO	simobserve::simobserve::	preparing empty measurement set
+2018-06-22 23:11:30	INFO	simobserve::simobserve::	You desire an hour angle of 0.0 hours
+2018-06-22 23:11:33	INFO	simobserve::NewMSSimulator::initAnt() 	Using global coordinates for the antennas
+2018-06-22 23:11:33	INFO	simobserve::NewMSSimulator::initAnt() 	Added rows to ANTENNA table
+2018-06-22 23:11:33	INFO	simobserve::MSsimulator::initSpWindows() 	Creating new spectral window band1, ID 1
+2018-06-22 23:11:33	INFO	simobserve::MSsimulator::initFeeds() 	Added rows to FEED table
+2018-06-22 23:11:33	INFO	simobserve::simulator::settimes()	Times 
+2018-06-22 23:11:33	INFO	simobserve::simulator::settimes()+	     Integration time 10s
+2018-06-22 23:11:33	INFO	simobserve::simulator::settimes()	     Times will be interpreted as hour angles for first source
+2018-06-22 23:11:33	WARN	simobserve::simutil::	Not all pointings in the mosaic will be observed - check mosaic setup and exposure time parameters!
+2018-06-22 23:11:33	INFO	simutil::NewMSSimulator::observe()	First source: arrTarget.alma.cycle1.3_0 @ 00:39:53.46   -50.01.14.11       J2000
+2018-06-22 23:11:33	INFO	simutil::NewMSSimulator::observe()+	Full time range: 31-Dec-2013/22:27:21.7 -- 31-Dec-2013/22:32:21.7 TAI with int = 10
+2018-06-22 23:11:33	INFO	simutil::NewMSSimulator::observe()	Calculating a total of 30 integrations
+2018-06-22 23:11:34	INFO	simutil::Simulator::setdata() 	Selecting data
+2018-06-22 23:11:34	INFO	simutil::Simulator::setdata() 	Performing selection on MeasurementSet
+2018-06-22 23:11:34	INFO	simutil::Simulator::setdata() 	Selecting on field and spectral window ids
+2018-06-22 23:11:34	INFO	simutil::Simulator::setdata() 	No selection string given
+2018-06-22 23:11:34	INFO	simutil::Simulator::setdata() 	Selection did not drop any rows
+2018-06-22 23:11:34	INFO	simutil::Simulator::setvp()	Setting voltage pattern parameters
+2018-06-22 23:11:34	INFO	simutil::Simulator::setvp()	Beam Squint will be included in the VP model
+2018-06-22 23:11:34	INFO	simutil::Simulator::setvp()	and the parallactic angle increment is 360 degrees
+2018-06-22 23:11:34	INFO	simobserve::simobserve::	done setting up observations (blank visibilities)
+2018-06-22 23:11:34	INFO	simobserve::simobserve::	predicting from source.cl
+2018-06-22 23:11:34	INFO	simobserve::Simulator::predict() 	Predicting visibilities using model: [] and componentList: source.cl
+2018-06-22 23:11:34	INFO	simobserve::Simulator::predict() 	The data column will be replaced
+2018-06-22 23:11:34	INFO	simobserve::Simulator::getVPRecord 	Using Voltage Patterns from the VPManager
+2018-06-22 23:11:34	INFO	simobserve::Simulator::createSkyEquation() 	Synthesis gridding 
+2018-06-22 23:11:34	INFO	simobserve::Simulator::createSkyEquation() 	Fourier transforms will use image centers as tangent points
+2018-06-22 23:11:34	INFO	simobserve::VPSkyJones::VPSkyJones	PB used ALMA
+2018-06-22 23:11:34	INFO	simobserve::BeamSkyJones::summary	Beam Summary: 
+2018-06-22 23:11:34	INFO	simobserve::BeamSkyJones::summary	Model 1 for ALMA ant=-1 feed=-1 uses PB: AIRY
+2018-06-22 23:11:34	INFO	simobserve::PBMath1D::summary	Using AIRY PB Class 
+2018-06-22 23:11:34	INFO	simobserve::PBMathInterface::summary	These parameters are for Voltage Pattern
+2018-06-22 23:11:34	INFO	simobserve::PBMathInterface::summary	No Beam Squint
+2018-06-22 23:11:34	INFO	simobserve::PBMath1D::summary	Max Radius at 1 GHz: 107.04 arcmin 
+2018-06-22 23:11:34	INFO	simobserve::PBMath1DAiry::summary	   Dish Diameter: 10.7 m 
+2018-06-22 23:11:34	INFO	simobserve::PBMath1DAiry::summary	Blocked Diameter: 0.75 m 
+2018-06-22 23:11:40	INFO	simobserve::Simulator::reset() 	Resetting all visibility corruption components
+2018-06-22 23:11:40	INFO	simobserve::Simulator::reset() 	Reset all image-plane corruption components
+2018-06-22 23:11:40	INFO	simobserve::simobserve::	generation of measurement set arrTarget/arrTarget.alma.cycle1.3.ms complete
+2018-06-22 23:11:41	INFO	simobserve::::	Position: [1761.87, -4307.63, -1977.71]
+2018-06-22 23:11:41	INFO	simobserve::::+	Epoch: 56658::00:00:00.0000
+2018-06-22 23:11:41	INFO	simobserve::::+	Epoch: 56657::22:29:58.6019
+2018-06-22 23:11:41	INFO	simobserve::::+	LAST of rise= 16:40:11.51
+2018-06-22 23:11:41	INFO	simobserve::::	LAST of  set= 08:41:06.99
+2018-06-22 23:11:41	INFO	simobserve::::	UTC of rise= 2013/12/31/14:30:29
+2018-06-22 23:11:41	INFO	simobserve::::+	UTC of  set= 2014/01/01/06:28:47
+2018-06-22 23:11:41	INFO	simobserve::ephemeris::	peak=31-Dec-2013/22:29:59
+2018-06-22 23:11:41	INFO	simobserve::Imager::open() 	Opening MeasurementSet /home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/arrTarget/arrTarget.alma.cycle1.3.ms
+2018-06-22 23:11:41	INFO	simobserve::simobserve::	using default model cell {'value': 0.107626995287, 'unit': 'arcsec'} for PSF calculation
+2018-06-22 23:11:41	INFO	simobserve::imager::defineimage()	Defining image properties:nx=128 ny=128 cellx='0.107627arcsec' celly='0.107627arcsec' stokes=I' mode=MFS nchan=-1 start=0 step=0 spwids=[0] fieldid=0 facets=1 frame=1 distance='0'
+2018-06-22 23:11:41	INFO	simobserve::imager::defineimage()	 phaseCenter='field-0 ' mStart='Radialvelocity: 0' qStep='0 '' mFreqStart='Frequency: 0
+2018-06-22 23:11:41	INFO	simobserve::imager::approximatepsfs() 	Calculating approximate PSFs using full sky equation
+2018-06-22 23:11:41	INFO	simobserve::imager::createFTMachine() 	Performing interferometric gridding...
+2018-06-22 23:11:42	INFO	simobserve::ImageSkyModel::makeApproxPSFs	bmaj: 1.91437", bmin: 1.75435", bpa: 21.8273 deg
+2018-06-22 23:11:42	INFO	simobserve::imager::approximatepsfs() 	Approximate PSF  : size 1.91437 by 1.75435 (arcsec) at pa 21.8273 (deg)
+2018-06-22 23:11:42	INFO	simobserve::imager::approximatepsfs() +	and volume = 154.521 pixels 
+2018-06-22 23:11:42	INFO	simobserve::imager::fitpsf() 	Fitting to psf
+2018-06-22 23:11:42	INFO	simobserve::imager::fitpsf() 	  Beam fit: 1.91437 by 1.75435 (arcsec) at pa 21.8273 (deg) 
+2018-06-22 23:11:42	INFO	simobserve::CasacRegionManager::fromBCS	No directional region specified. Using full positional plane.
+2018-06-22 23:11:42	INFO	simobserve::CasacRegionManager::fromBCS	Using all spectral channels.
+2018-06-22 23:11:42	INFO	simobserve::CasacRegionManager::fromBCS	Using polarizations ALL
+2018-06-22 23:11:42	INFO	simobserve::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:11:42	INFO	simobserve::ImageRegion::fromRecord+	    [0, 0, 0, 0] to [127, 127, 0, 0]  (00:39:54.175, -50.01.20.995, I, 1e+11Hz to 00:39:52.756, -50.01.07.327, I, 1e+11Hz)
+2018-06-22 23:11:42	INFO	simobserve::noise::	copying arrTarget/arrTarget.alma.cycle1.3.ms to arrTarget/arrTarget.alma.cycle1.3.noisy.ms and adding thermal noise
+2018-06-22 23:11:42	INFO	simobserve::noise::	interpolated receiver temp=45
+2018-06-22 23:11:42	INFO	noise::NewMSSimulator::NewMSSimulator(MeasurementSet& theMS) 	Opening MeasurementSet /home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/arrTarget/arrTarget.alma.cycle1.3.noisy.ms with 14880 rows
+2018-06-22 23:11:42	INFO	noise::NewMSSimulator::NewMSSimulator(MeasurementSet& theMS) 	   last spectral window ID = 1
+2018-06-22 23:11:42	INFO	noise::Simulator::setdata() 	Selecting data
+2018-06-22 23:11:42	INFO	noise::Simulator::setdata() 	Performing selection on MeasurementSet
+2018-06-22 23:11:42	INFO	noise::Simulator::setdata() 	Selecting on spectral window id
+2018-06-22 23:11:42	INFO	noise::Simulator::setdata() 	No selection string given
+2018-06-22 23:11:42	INFO	noise::Simulator::setdata() 	Selection did not drop any rows
+2018-06-22 23:11:42	INFO	noise::Simulator::create_corrupt() 	Creating A NOISE Calibration structure for data corruption.
+2018-06-22 23:11:42	INFO	noise::SVC::sizeUpSim() 	For simint = integration, found 1 solution intervals.
+2018-06-22 23:11:42	INFO	noise::SVC[A Noise]::setSimulate() 	calTable name not set - not writing to disk (note: OTF sim - not creating Calset either)
+2018-06-22 23:11:42	INFO	noise::Simulator::setnoise2() 	adding noise with the sensitivity constant of 1/sqrt(2)
+2018-06-22 23:11:42	INFO	noise::Simulator::setnoise2() 	User has not set ground pressure, using 560mb
+2018-06-22 23:11:42	INFO	noise::Simulator::setnoise2() 	User has not set site altitude, using 5000m
+2018-06-22 23:11:42	INFO	noise::Simulator::setnoise2() 	User has not set water scale height, using 2km
+2018-06-22 23:11:42	INFO	noise::Simulator::create_corrupt() 	Creating TF NOISE Calibration structure for data corruption.
+2018-06-22 23:11:42	INFO	noise::SVC::sizeUpSim() 	For simint = integration, found 30 solution intervals.
+2018-06-22 23:11:42	INFO	noise::AtmCorr::initAtm 	Initializing ATM
+2018-06-22 23:11:42	INFO	noise::AtmCorr::initAtm 	altitude=5000m, Pground=560mb, Tground=270K, humidity= 20%, water scale height=2000m
+2018-06-22 23:11:42	INFO	noise::AtmCorr::initAtm 	Spectral window 100(ch 5/10)
+2018-06-22 23:11:42	INFO	noise::AtmCorr::initAtm 	After setting WH2O to 5
+2018-06-22 23:11:42	INFO	noise::AtmCorr::initAtm 	Dry and Wet Opacity from RefractiveIndexProfile = 0.0111715, 0.0353835 at 100 GHz (ch0)
+2018-06-22 23:11:42	INFO	noise::AtmCorr::initAtm 	Dry and Wet Opacity from SkyStatus              = 0.0111715, 0.0353835
+2018-06-22 23:11:42	INFO	noise::AtmCorr::initAtm 	Sky plus ground and CMB Brightness Temp across Spw 0, for spill=0.95 Tground=270 pwv=5
+2018-06-22 23:11:42	INFO	noise::AtmCorr::initAtm 	 Zenith Tebb[99.9,100,100.08]=[27.5747,27.6059,27.6344]
+2018-06-22 23:11:42	INFO	noise::AtmCorr::init(vi,par,type) 	Zenith Tsys at center of first Spectral Window = 73.6237 tground=270 spillover=0.95
+2018-06-22 23:11:42	INFO	noise::AtmCorr::init(vi,par,type) 	 pwv=5 tau=0.046555(ch0)
+2018-06-22 23:11:42	INFO	noise::SVC[Tf Jones]::setSimulate() 	Calculating corruption terms for simulated Tf Jones: output table=arrTarget/arrTarget.alma.cycle1.3.noisy.T.cal simint=integration t=0
+2018-06-22 23:11:42	INFO	noise::SVC[Tf Jones]::setSimulate() 	Writing calTable = arrTarget/arrTarget.alma.cycle1.3.noisy.T.cal (Tf Jones)
+2018-06-22 23:11:42	INFO	noise::::	Writing solutions to table: arrTarget/arrTarget.alma.cycle1.3.noisy.T.cal
+2018-06-22 23:11:44	INFO	noise::Simulator::corrupt() 	Doing visibility corruption.
+2018-06-22 23:11:44	INFO	noise::Simulator::corrupt() 	simulated A Noise: output table=<none> simint=integration t=0spwok = [1] in correct mode.
+2018-06-22 23:11:44	INFO	noise::Simulator::corrupt() 	simulated Tf Jones: output table=arrTarget/arrTarget.alma.cycle1.3.noisy.T.cal simint=integration t=0spwok = [1] in corrupt mode.
+2018-06-22 23:11:44	INFO	noise::Simulator::reset() 	Resetting all visibility corruption components
+2018-06-22 23:11:44	INFO	noise::Simulator::reset() 	Reset all image-plane corruption components
+2018-06-22 23:11:44	INFO	simalma::simutil::	 
+2018-06-22 23:11:44	INFO	simalma::simalma::	------------------------------------------------------------
+2018-06-22 23:11:44	INFO	simalma::simalma::	Step 2: imaging and analyzing /home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg
+2018-06-22 23:11:44	WARN	simalma::simalma::	  This step is optional, but useful to assess the result from just one configuration.
+2018-06-22 23:11:44	WARN	simalma::simalma::	  WARNING: The example clean shown here uses no mask, may diverge, and almost certainly is not optimal.
+2018-06-22 23:11:44	WARN	simalma::simalma::	  Users are HIGHLY recommended to use interactive clean masking (in simanalyze or directly in clean)
+2018-06-22 23:11:44	WARN	simalma::simalma::	  Auto-masking is under development for use in the ALMA pipeline and will be included here in a future release
+2018-06-22 23:11:44	INFO	simalma::simalma::	------------------------------------------------------------
+2018-06-22 23:11:44	INFO	simalma::simutil::	simanalyze(cell='0.2arcsec', analyze=True, dryrun=False, verbose=False, niter=2000, stokes='I', image=True, outertaper=[], mask=[], project='arrTarget', vis='arrTarget.alma.cycle1.3.noisy.ms', logfile='arrTarget/arrTarget.simalma.report.txt', imdirection='J2000 00:40:00.14328 -049.59.59.730000', graphics='both', threshold='0.01mJy', weighting='briggs', modelimage='', overwrite=True, imsize=[750])
+2018-06-22 23:11:44	INFO	simanalyze::simanalyze::	Found a synthesis measurement set, arrTarget/arrTarget.alma.cycle1.3.noisy.ms.
+2018-06-22 23:11:44	INFO	simanalyze::simanalyze::	Sky model image arrTarget/arrTarget.alma.cycle1.3.compskymodel found.
+2018-06-22 23:11:44	INFO	simanalyze::simutil::	clean(vis='arrTarget/arrTarget.alma.cycle1.3.noisy.ms',imagename='arrTarget/arrTarget.alma.cycle1.3.noisy',niter=2000,threshold='0.01mJy',psfmode='clark',imagermode='mosaic',ftmachine='mosaic',mask=[],imsize=[750, 750],cell=['0.2arcsec','0.2arcsec'],phasecenter='J2000 00:40:00.14328 -049.59.59.730000',weighting='briggs',robust=0.5,uvtaper=False,pbcor=True)
+2018-06-22 23:11:52	INFO	ImageFactory::fromImage	Created image 'arrTarget/arrTarget.alma.cycle1.3.noisy.image.flat' of shape [750, 750]
+2018-06-22 23:11:52	INFO	image::_adddegaxes 	Creating image 'arrTarget/arrTarget.alma.cycle1.3.noisy.image.flat' of shape [750, 750, 1]
+2018-06-22 23:11:53	INFO	ImageFactory::fromImage	Created image 'arrTarget/arrTarget.alma.cycle1.3.noisy.residual.flat' of shape [750, 750]
+2018-06-22 23:11:54	INFO	image::_adddegaxes 	Creating image 'arrTarget/arrTarget.alma.cycle1.3.noisy.residual.flat' of shape [750, 750, 1]
+2018-06-22 23:11:54	INFO	clean::simanalyze::	done inverting and cleaning
+2018-06-22 23:11:54	INFO	clean::simanalyze::	synthesized beam area in output pixels = 85.520024
+2018-06-22 23:11:55	INFO	simanalyze::BeamManipulator::set	Setting (global) restoring beam.
+2018-06-22 23:11:55	INFO	simanalyze::BeamManipulator::set	Beam parameters:  Major          : 1.84038 arcsec
+2018-06-22 23:11:55	INFO	simanalyze::BeamManipulator::set+	  Minor          : 1.64041 arcsec
+2018-06-22 23:11:55	INFO	simanalyze::BeamManipulator::set+	  Position Angle : 21.6828 deg
+2018-06-22 23:11:55	INFO	simanalyze::CasacRegionManager::fromBCS	No directional region specified. Using full positional plane.
+2018-06-22 23:11:55	INFO	simanalyze::CasacRegionManager::fromBCS	Using polarizations ALL
+2018-06-22 23:11:55	INFO	simanalyze::ImageMaskAttacher::makeMask	Created and initialized mask `mask0'
+2018-06-22 23:11:55	INFO	simanalyze::ImageRegrid::_checkAxes 	The Stokes axis cannot be regridded - removing from list
+2018-06-22 23:11:55	WARN	simanalyze::ImageRegrid::regrid	You are regridding an image whose beam is not well sampled by the pixel size.  Total flux can be lost when regridding such images, especially when the new pixel size is larger than the old pixel size. It is recommended to check the total flux of your input and output image, and if necessary rebin the input to have smaller pixels.
+2018-06-22 23:11:55	INFO	simanalyze::ImageRegrid::regrid 	Applying Jy/pixel scale factor of 3.45317
+2018-06-22 23:11:55	INFO	simanalyze::SubImageFactory::createImage	Creating image 'arrTarget/arrTarget.alma.cycle1.3.compskymodel.flat.regrid.tmp' of shape [750, 750, 1]
+2018-06-22 23:11:55	INFO	simanalyze::ImageExprCalculator::_imagecalc	Creating image `arrTarget/arrTarget.alma.cycle1.3.compskymodel.flat.regrid' of shape [750, 750, 1]
+2018-06-22 23:11:56	INFO	simanalyze::Image2DConvolver::_dealWithRestoringBeam	You are convolving the sky
+2018-06-22 23:11:56	INFO	simanalyze::Image2DConvolver::_dealWithRestoringBeam	Scaling pixel values by 1
+2018-06-22 23:11:56	INFO	simanalyze::Image2DConvolver::_dealWithRestoringBeam	Original /home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/arrTarget/arrTarget.alma.cycle1.3.compskymodel.flat.regrid resolution major: 1.84038 arcsec, minor: 1.64041 arcsec, pa: 21.6828 deg
+2018-06-22 23:11:56	INFO	simanalyze::Image2DConvolver::_dealWithRestoringBeam	Output arrTarget/arrTarget.alma.cycle1.3.compskymodel.flat.regrid.conv resolution major: 1.84038 arcsec, minor: 1.64041 arcsec, pa: 21.6828 deg
+2018-06-22 23:11:57	INFO	simanalyze::SubImageFactory::createImage	Creating image 'arrTarget/arrTarget.alma.cycle1.3.compskymodel.flat.regrid.conv' of shape [750, 750, 1]
+2018-06-22 23:11:57	INFO	simanalyze::BeamManipulator::set	Setting (global) restoring beam.
+2018-06-22 23:11:57	INFO	simanalyze::BeamManipulator::set	Beam parameters:  Major          : 1.84038 arcsec
+2018-06-22 23:11:57	INFO	simanalyze::BeamManipulator::set+	  Minor          : 1.64041 arcsec
+2018-06-22 23:11:57	INFO	simanalyze::BeamManipulator::set+	  Position Angle : 21.6828 deg
+2018-06-22 23:11:57	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:11:57	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:11:57	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:11:57	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:11:57	INFO1	simanalyze::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:11:57	DEBUG1	simanalyze::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:11:57	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:11:57	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:11:57	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:11:57	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:11:57	INFO1	simanalyze::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:11:57	DEBUG1	simanalyze::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:11:58	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:11:58	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:11:58	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:11:58	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:11:58	INFO1	simanalyze::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:11:58	DEBUG1	simanalyze::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:11:58	INFO	clean::statim::	arrTarget/arrTarget.alma.cycle1.3.noisy.residual.flat: unknown units
+2018-06-22 23:11:58	INFO	statim::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:11:58	INFO	statim::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:11:58	INFO	statim::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:11:58	INFO	statim::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:11:58	INFO1	statim::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:11:58	DEBUG1	statim::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:11:58	INFO	statim::ImageExprCalculator::_imagecalc	Creating image `arrTarget/arrTarget.alma.cycle1.3.noisy.diff' of shape [750, 750, 1]
+2018-06-22 23:11:59	INFO	statim::ImageExprCalculator::_imagecalc	Creating image `arrTarget/arrTarget.alma.cycle1.3.noisy.absdiff' of shape [750, 750, 1]
+2018-06-22 23:11:59	INFO	statim::ImageExprCalculator::_imagecalc	Creating image `arrTarget/arrTarget.alma.cycle1.3.noisy.fidelity' of shape [750, 750, 1]
+2018-06-22 23:12:00	INFO	clean::analysis::	fidelity image calculated
+2018-06-22 23:12:00	INFO	analysis::ImageExprCalculator::_imagecalc	Creating image `arrTarget/arrTarget.alma.cycle1.3.noisy.absconv' of shape [750, 750, 1]
+2018-06-22 23:12:00	INFO	clean::analysis::	fidelity range (max model / rms difference) = 84.7060660303
+2018-06-22 23:12:01	INFO	analysis::CasacRegionManager::fromBCS	No directional region specified. Using full positional plane.
+2018-06-22 23:12:01	INFO	analysis::CasacRegionManager::fromBCS	Using all spectral channels.
+2018-06-22 23:12:01	INFO	analysis::CasacRegionManager::fromBCS	Using polarizations ALL
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0, 0] to [749, 749, 0, 0]  (00:40:07.925, -50.01.14.714, I, 1e+11Hz to 00:39:52.389, -49.58.44.914, I, 1e+11Hz)
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:12:01	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:12:01	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:12:01	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:12:01	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:12:01	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:12:01	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:12:01	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:12:02	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:12:02	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:12:02	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:12:02	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:12:02	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:12:02	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:12:02	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:12:02	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:12:02	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:12:02	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:12:02	INFO	clean::analysis::	Simulation rms: [  2.56316998e-05] Jy/pix = [ 0.00219202] Jy/bm
+2018-06-22 23:12:02	INFO	clean::analysis::	Simulation max: [ 0.00085615] Jy/pix = [ 0.0732177] Jy/bm
+2018-06-22 23:12:02	INFO	clean::analysis::	Beam bmaj: 1.84037911892 bmin: 1.6404094696 bpa: 21.6827907562
+2018-06-22 23:12:02	INFO	analysis::name::	No table opened.
+2018-06-22 23:12:02	INFO	simalma::::	##### End Task: simalma              #####
+2018-06-22 23:12:02	INFO	simalma::::+	##########################################
+2018-06-22 23:12:02	INFO3	utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:12:02	INFO3	exportfits::utils::verify	Verifying arguments....verified.
+2018-06-22 23:12:02	INFO3	exportfits::utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:12:02	INFO	exportfits::::	
+2018-06-22 23:12:02	INFO	exportfits::::+	##########################################
+2018-06-22 23:12:02	INFO	exportfits::::+	##### Begin Task: exportfits         #####
+2018-06-22 23:12:02	INFO	exportfits::::	exportfits(imagename="/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/arrTarget/arrTarget.alma.cycle1.3.noisy.image",fitsimage="/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/products/alma.cycle1.3.image.fits.0",velocity=False,optical=False,bitpix=-32,
+2018-06-22 23:12:02	INFO	exportfits::::+	        minpix=0,maxpix=-1,overwrite=True,dropstokes=False,stokeslast=True,
+2018-06-22 23:12:02	INFO	exportfits::::+	        history=True,dropdeg=False)
+2018-06-22 23:12:02	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2018-06-22 23:12:02	DEBUG1	exportfits::FITSCoordinateUtil::toFITSHeader (file ../../coordinates/Coordinates/FITSCoordinateUtil.cc, line 81)	Identified axis number 2 as latitude axis for WCS. pv2_ is the keyword name.
+2018-06-22 23:12:02	INFO	exportfits::::	##### End Task: exportfits           #####
+2018-06-22 23:12:02	INFO	exportfits::::+	##########################################
+2018-06-22 23:12:02	INFO3	utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:12:02	INFO3	exportfits::utils::verify	Verifying arguments....verified.
+2018-06-22 23:12:02	INFO3	exportfits::utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:12:02	INFO	exportfits::::	
+2018-06-22 23:12:02	INFO	exportfits::::+	##########################################
+2018-06-22 23:12:02	INFO	exportfits::::+	##### Begin Task: exportfits         #####
+2018-06-22 23:12:02	INFO	exportfits::::	exportfits(imagename="/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/arrTarget/arrTarget.alma.cycle1.3.compskymodel.flat.regrid.conv",fitsimage="/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/products/alma.cycle1.3.compskymodel.flat.regrid.conv.fits.0",velocity=False,optical=False,bitpix=-32,
+2018-06-22 23:12:02	INFO	exportfits::::+	        minpix=0,maxpix=-1,overwrite=True,dropstokes=False,stokeslast=True,
+2018-06-22 23:12:02	INFO	exportfits::::+	        history=True,dropdeg=False)
+2018-06-22 23:12:02	DEBUG1	exportfits::FITSCoordinateUtil::toFITSHeader (file ../../coordinates/Coordinates/FITSCoordinateUtil.cc, line 81)	Identified axis number 2 as latitude axis for WCS. pv2_ is the keyword name.
+2018-06-22 23:12:02	INFO	exportfits::::	##### End Task: exportfits           #####
+2018-06-22 23:12:02	INFO	exportfits::::+	##########################################
+2018-06-22 23:12:02	INFO3	utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:12:02	INFO3	simalma::utils::verify	Verifying arguments....verified.
+2018-06-22 23:12:02	INFO3	simalma::utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:12:02	INFO	simalma::::	
+2018-06-22 23:12:02	INFO	simalma::::+	##########################################
+2018-06-22 23:12:02	INFO	simalma::::+	##### Begin Task: simalma            #####
+2018-06-22 23:12:02	INFO	simalma::::	simalma(project="simRan",dryrun=False,skymodel="",inbright="",indirection="",
+2018-06-22 23:12:02	INFO	simalma::::+	        incell="",incenter="",inwidth="",complist="source.cl",compwidth="200MHz",
+2018-06-22 23:12:02	INFO	simalma::::+	        setpointings=True,ptgfile="$project.ptg.txt",integration="10s",direction="",mapsize="150arcsec",
+2018-06-22 23:12:02	INFO	simalma::::+	        antennalist="alma.simRan0.cfg",hourangle="transit",totaltime="300s",tpnant=0,tptime="0s",
+2018-06-22 23:12:02	INFO	simalma::::+	        pwv=5.0,image=True,imsize=750,imdirection="",cell="0.2arcsec",
+2018-06-22 23:12:02	INFO	simalma::::+	        niter=2000,threshold="0.01mJy",graphics="both",verbose=False,overwrite=True)
+2018-06-22 23:12:02	INFO	simalma::::	Project directory, 'simRan', already exists.
+2018-06-22 23:12:02	INFO	simalma::::	Removing old project directory 'simRan'
+2018-06-22 23:12:02	INFO3	simalma::utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:12:02	INFO	simalma::simutil::	============================================================
+2018-06-22 23:12:02	INFO	simalma::simalma::	Checking the sky model
+2018-06-22 23:12:02	INFO	simalma::simutil::	 
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632944, 0.111841, -0.766077]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632963, 0.111683, -0.766084]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633157, 0.111647, -0.765929]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.63323, 0.1114, -0.765904]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632913, 0.111338, -0.766176]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633007, 0.11175, -0.766038]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633202, 0.111745, -0.765877]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632994, 0.111811, -0.76604]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632926, 0.111401, -0.766155]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632881, 0.111703, -0.766149]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633022, 0.111703, -0.766032]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632866, 0.11182, -0.766144]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632861, 0.111341, -0.766218]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633112, 0.111595, -0.765974]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633241, 0.111425, -0.765892]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633227, 0.111719, -0.76586]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.63295, 0.11149, -0.766123]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632986, 0.111654, -0.766069]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632908, 0.11176, -0.766118]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.6329, 0.111659, -0.76614]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633023, 0.111567, -0.766051]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632899, 0.111854, -0.766112]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632907, 0.111689, -0.76613]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633255, 0.1115, -0.765869]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632995, 0.111896, -0.766026]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633109, 0.111709, -0.765959]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632819, 0.111798, -0.766186]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633102, 0.111822, -0.765949]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632974, 0.111523, -0.766098]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633081, 0.111565, -0.766004]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632851, 0.111859, -0.766151]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632943, 0.111885, -0.766071]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632897, 0.111382, -0.766182]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633131, 0.111655, -0.765949]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632892, 0.111864, -0.766116]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633077, 0.111536, -0.766011]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633047, 0.111755, -0.766004]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633045, 0.111851, -0.765992]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632864, 0.111615, -0.766176]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632857, 0.111419, -0.76621]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633164, 0.111552, -0.765937]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633159, 0.111767, -0.76591]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.63305, 0.111485, -0.766041]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633166, 0.111517, -0.76594]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633145, 0.111564, -0.765951]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.63309, 0.111502, -0.766005]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633182, 0.111834, -0.765881]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633264, 0.111456, -0.765868]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.63311, 0.111445, -0.765997]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633142, 0.11141, -0.765976]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633151, 0.111867, -0.765902]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632972, 0.11134, -0.766126]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632885, 0.111834, -0.766126]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.63297, 0.111817, -0.766059]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632892, 0.111395, -0.766185]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632916, 0.111641, -0.766129]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632837, 0.111674, -0.766189]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632819, 0.111631, -0.76621]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632844, 0.111373, -0.766227]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.63297, 0.11156, -0.766096]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633026, 0.111396, -0.766074]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633017, 0.11137, -0.766085]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633078, 0.11154, -0.76601]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633092, 0.111909, -0.765945]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633121, 0.111627, -0.765961]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632963, 0.111884, -0.766055]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633107, 0.111747, -0.765956]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.63311, 0.111377, -0.766007]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633206, 0.11177, -0.765871]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633028, 0.111517, -0.766055]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632884, 0.111341, -0.766199]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633036, 0.111682, -0.766024]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632889, 0.111607, -0.766157]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632963, 0.111588, -0.766098]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632904, 0.11151, -0.766158]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632992, 0.111885, -0.766031]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633171, 0.111639, -0.765919]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632987, 0.11169, -0.766064]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633088, 0.111759, -0.765969]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632927, 0.11155, -0.766133]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.63294, 0.11146, -0.766135]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633134, 0.111888, -0.765913]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632927, 0.111714, -0.76611]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633252, 0.111515, -0.765869]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.63288, 0.111679, -0.766153]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633216, 0.111483, -0.765904]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633056, 0.111505, -0.766033]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633045, 0.11162, -0.766025]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632932, 0.111492, -0.766138]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633159, 0.11175, -0.765912]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633205, 0.111699, -0.765882]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632803, 0.111617, -0.766226]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632962, 0.111485, -0.766114]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632866, 0.111471, -0.766195]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633145, 0.111494, -0.765961]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633141, 0.111707, -0.765933]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.632867, 0.111743, -0.766154]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633164, 0.111599, -0.76593]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633071, 0.111782, -0.76598]
+2018-06-22 23:12:02	INFO3	simutil::componentlist::getrefdir	Direction: [0.633061, 0.111582, -0.766018]
+2018-06-22 23:12:03	INFO	simalma::simutil::	You will be simulating only from component list source.cl
+2018-06-22 23:12:03	INFO	simalma::simutil::	Based on the spatial distribution of components, a sky model image will be generated with these parameters:
+2018-06-22 23:12:03	INFO	simalma::simutil::	  image size          = 0.032750000deg
+2018-06-22 23:12:03	INFO	simalma::simutil::	  reference direction = J2000 00:40:00.14328 -049.59.59.730000
+2018-06-22 23:12:03	INFO	simalma::simutil::	and each call to simobserve will chose a skymodel cell size of 1/20 the expected PSF FWHM (to accurately locate components).
+2018-06-22 23:12:03	INFO	simalma::simutil::	Simulation from components-only produces a single channel / continuum observation
+2018-06-22 23:12:03	INFO	simalma::simutil::	  with bandwidth = 200MHz
+2018-06-22 23:12:03	INFO	simalma::simutil::	 
+2018-06-22 23:12:03	INFO	simalma::simutil::	You will be mapping an area of size 150.000000000arcsec,150.000000000arcsec
+2018-06-22 23:12:03	INFO	simalma::simutil::	  primary beam size: 58.229485058arcsec
+2018-06-22 23:12:03	INFO	simalma::simutil::	 
+2018-06-22 23:12:03	INFO	simalma::simutil::	============================================================
+2018-06-22 23:12:03	INFO	simalma::simalma::	You are requesting 1 configurations:
+2018-06-22 23:12:03	INFO	simalma::readantenna::	Reading antenna positions from 'alma.simRan0.cfg'
+2018-06-22 23:12:03	INFO	simalma::readantenna::	Reading antenna positions from 'alma.simRan0.cfg'
+2018-06-22 23:12:03	INFO	simalma::simutil::	  
+2018-06-22 23:12:03	INFO	simalma::simutil::	  alma.simRan0.cfg:
+2018-06-22 23:12:03	INFO	simalma::simutil::	    12m ALMA array
+2018-06-22 23:12:03	INFO	simalma::simutil::	    This is a full ALMA configuration
+2018-06-22 23:12:03	INFO	simalma::simutil::	    approximate synthesized beam FWHM = 1.730323 arcsec
+2018-06-22 23:12:03	INFO	simalma::simutil::	       (at zenith; the actual beam will depend on declination, hourangle, and uv coverage)
+2018-06-22 23:12:03	INFO	simalma::simutil::	    Observation time = 5.000000 min
+2018-06-22 23:12:03	INFO	simalma::simutil::	
+2018-06-22 23:12:03	INFO	simalma::simutil::	============================================================
+2018-06-22 23:12:03	INFO	simalma::simalma::	simalma calls simobserve to simulate each component:
+2018-06-22 23:12:03	INFO	simalma::simutil::	
+2018-06-22 23:12:03	WARN	simalma::simalma::	------------------------------------------------------------
+2018-06-22 23:12:03	WARN	simalma::simalma::	Step 1: simulating 12m ALMA array
+2018-06-22 23:12:03	WARN	simalma::simalma::	------------------------------------------------------------
+2018-06-22 23:12:03	INFO	simalma::simutil::	simobserve(antennalist=alma.simRan0.cfg, verbose=False, incell='', leakage=0.0, overwrite=True, calflux='0Jy', integration='10s', pointingspacing='0.510929441761PB', sdant=0, complist='source.cl', direction=[''], caldirection='', t_ground=270.0, compwidth='200MHz', sdantlist='', maptype='ALMA', graphics='both', inbright='', inwidth='', skymodel='', thermalnoise='tsys-atm', totaltime='5.000000min', hourangle='transit', ptgfile='$project.ptg.txt', obsmode='int', project='simRan', indirection='', user_pwv=5.0, mapsize=['150arcsec', '150arcsec'], incenter='', setpointings=True)
+2018-06-22 23:12:03	INFO3	simobserve::utils::verify	Verifying arguments....verified.
+2018-06-22 23:12:03	INFO3	simobserve::utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632944, 0.111841, -0.766077]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632963, 0.111683, -0.766084]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633157, 0.111647, -0.765929]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63323, 0.1114, -0.765904]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632913, 0.111338, -0.766176]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633007, 0.11175, -0.766038]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633202, 0.111745, -0.765877]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632994, 0.111811, -0.76604]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632926, 0.111401, -0.766155]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632881, 0.111703, -0.766149]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633022, 0.111703, -0.766032]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632866, 0.11182, -0.766144]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632861, 0.111341, -0.766218]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633112, 0.111595, -0.765974]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633241, 0.111425, -0.765892]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633227, 0.111719, -0.76586]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63295, 0.11149, -0.766123]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632986, 0.111654, -0.766069]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632908, 0.11176, -0.766118]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.6329, 0.111659, -0.76614]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633023, 0.111567, -0.766051]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632899, 0.111854, -0.766112]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632907, 0.111689, -0.76613]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633255, 0.1115, -0.765869]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632995, 0.111896, -0.766026]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633109, 0.111709, -0.765959]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632819, 0.111798, -0.766186]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633102, 0.111822, -0.765949]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632974, 0.111523, -0.766098]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633081, 0.111565, -0.766004]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632851, 0.111859, -0.766151]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632943, 0.111885, -0.766071]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632897, 0.111382, -0.766182]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633131, 0.111655, -0.765949]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632892, 0.111864, -0.766116]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633077, 0.111536, -0.766011]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633047, 0.111755, -0.766004]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633045, 0.111851, -0.765992]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632864, 0.111615, -0.766176]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632857, 0.111419, -0.76621]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633164, 0.111552, -0.765937]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633159, 0.111767, -0.76591]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63305, 0.111485, -0.766041]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633166, 0.111517, -0.76594]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633145, 0.111564, -0.765951]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63309, 0.111502, -0.766005]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633182, 0.111834, -0.765881]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633264, 0.111456, -0.765868]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63311, 0.111445, -0.765997]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633142, 0.11141, -0.765976]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633151, 0.111867, -0.765902]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632972, 0.11134, -0.766126]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632885, 0.111834, -0.766126]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63297, 0.111817, -0.766059]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632892, 0.111395, -0.766185]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632916, 0.111641, -0.766129]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632837, 0.111674, -0.766189]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632819, 0.111631, -0.76621]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632844, 0.111373, -0.766227]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63297, 0.11156, -0.766096]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633026, 0.111396, -0.766074]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633017, 0.11137, -0.766085]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633078, 0.11154, -0.76601]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633092, 0.111909, -0.765945]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633121, 0.111627, -0.765961]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632963, 0.111884, -0.766055]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633107, 0.111747, -0.765956]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63311, 0.111377, -0.766007]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633206, 0.11177, -0.765871]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633028, 0.111517, -0.766055]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632884, 0.111341, -0.766199]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633036, 0.111682, -0.766024]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632889, 0.111607, -0.766157]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632963, 0.111588, -0.766098]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632904, 0.11151, -0.766158]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632992, 0.111885, -0.766031]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633171, 0.111639, -0.765919]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632987, 0.11169, -0.766064]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633088, 0.111759, -0.765969]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632927, 0.11155, -0.766133]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63294, 0.11146, -0.766135]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633134, 0.111888, -0.765913]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632927, 0.111714, -0.76611]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633252, 0.111515, -0.765869]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63288, 0.111679, -0.766153]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633216, 0.111483, -0.765904]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633056, 0.111505, -0.766033]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633045, 0.11162, -0.766025]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632932, 0.111492, -0.766138]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633159, 0.11175, -0.765912]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633205, 0.111699, -0.765882]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632803, 0.111617, -0.766226]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632962, 0.111485, -0.766114]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632866, 0.111471, -0.766195]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633145, 0.111494, -0.765961]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633141, 0.111707, -0.765933]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632867, 0.111743, -0.766154]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633164, 0.111599, -0.76593]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633071, 0.111782, -0.76598]
+2018-06-22 23:12:03	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633061, 0.111582, -0.766018]
+2018-06-22 23:12:03	INFO	simobserve::readantenna::	Reading antenna positions from 'alma.simRan0.cfg'
+2018-06-22 23:12:03	INFO	simobserve::readantenna::	Reading antenna positions from 'alma.simRan0.cfg'
+2018-06-22 23:12:03	INFO	readantenna::::	Created Paged image 'simRan/simRan.alma.simRan0.compskymodel' of shape [2044, 2044, 1, 1] with float valued pixels.
+2018-06-22 23:12:03	INFO	readantenna::ComponentImager::project	Adding components to image with units [Jy/pixel.pixel]
+2018-06-22 23:12:35	INFO	readantenna::ImageFactory::fromImage	Created image 'simRan/simRan.alma.simRan0.compskymodel.flat' of shape [2044, 2044]
+2018-06-22 23:12:35	INFO	readantenna::image::_adddegaxes 	Creating image 'simRan/simRan.alma.simRan0.compskymodel.flat' of shape [2044, 2044, 1]
+2018-06-22 23:12:36	INFO	simobserve::simobserve::	calculating map pointings centered at J2000 00:40:00.14328 -049.59.59.730000
+2018-06-22 23:12:36	INFO	simobserve::calc_pointings::	using 33 generated pointing(s)
+2018-06-22 23:12:36	INFO	simobserve::simobserve::	center = J2000 00:39:58.80775 -049.59.59.730000
+2018-06-22 23:12:36	INFO	simobserve::simobserve::	preparing empty measurement set
+2018-06-22 23:12:36	INFO	simobserve::simobserve::	You desire an hour angle of 0.0 hours
+2018-06-22 23:12:39	INFO	simobserve::NewMSSimulator::initAnt() 	Using global coordinates for the antennas
+2018-06-22 23:12:39	INFO	simobserve::NewMSSimulator::initAnt() 	Added rows to ANTENNA table
+2018-06-22 23:12:39	INFO	simobserve::MSsimulator::initSpWindows() 	Creating new spectral window band1, ID 1
+2018-06-22 23:12:39	INFO	simobserve::MSsimulator::initFeeds() 	Added rows to FEED table
+2018-06-22 23:12:39	INFO	simobserve::simulator::settimes()	Times 
+2018-06-22 23:12:39	INFO	simobserve::simulator::settimes()+	     Integration time 10s
+2018-06-22 23:12:39	INFO	simobserve::simulator::settimes()	     Times will be interpreted as hour angles for first source
+2018-06-22 23:12:39	WARN	simobserve::simutil::	Not all pointings in the mosaic will be observed - check mosaic setup and exposure time parameters!
+2018-06-22 23:12:39	INFO	simutil::NewMSSimulator::observe()	First source: simRan.alma.simRan0_0 @ 00:39:53.46   -50.01.14.11       J2000
+2018-06-22 23:12:39	INFO	simutil::NewMSSimulator::observe()+	Full time range: 31-Dec-2013/22:27:22.1 -- 31-Dec-2013/22:32:22.1 TAI with int = 10
+2018-06-22 23:12:39	INFO	simutil::NewMSSimulator::observe()	Calculating a total of 30 integrations
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()	   Field 0: simRan.alma.simRan0_0 @ 00:39:53.46   -50.01.14.11       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 1: simRan.alma.simRan0_1 @ 00:39:53.46   -50.00.44.36       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 2: simRan.alma.simRan0_2 @ 00:39:53.46   -50.00.14.61       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 3: simRan.alma.simRan0_3 @ 00:39:53.46   -49.59.44.85       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 4: simRan.alma.simRan0_4 @ 00:39:53.46   -49.59.15.10       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 5: simRan.alma.simRan0_5 @ 00:39:53.47   -49.58.45.35       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 6: simRan.alma.simRan0_6 @ 00:39:56.13   -50.00.59.23       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 7: simRan.alma.simRan0_7 @ 00:39:56.13   -50.00.29.48       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 8: simRan.alma.simRan0_8 @ 00:39:56.13   -49.59.59.73       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 9: simRan.alma.simRan0_9 @ 00:39:56.14   -49.59.29.98       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 10: simRan.alma.simRan0_10 @ 00:39:56.14   -49.59.00.23       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 11: simRan.alma.simRan0_11 @ 00:39:58.81   -50.01.14.11       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 12: simRan.alma.simRan0_12 @ 00:39:58.81   -50.00.44.36       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 13: simRan.alma.simRan0_13 @ 00:39:58.81   -50.00.14.61       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 14: simRan.alma.simRan0_14 @ 00:39:58.81   -49.59.44.85       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 15: simRan.alma.simRan0_15 @ 00:39:58.81   -49.59.15.10       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 16: simRan.alma.simRan0_16 @ 00:39:58.81   -49.58.45.35       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 17: simRan.alma.simRan0_17 @ 00:40:01.48   -50.00.59.23       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 18: simRan.alma.simRan0_18 @ 00:40:01.48   -50.00.29.48       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 19: simRan.alma.simRan0_19 @ 00:40:01.48   -49.59.59.73       J2000 for 1 integrations 
+2018-06-22 23:12:39	DEBUG1	simutil::NewMSSimulator::observe()+	   (continuing without printing to log -- see MS for details) 
+2018-06-22 23:12:40	INFO	simutil::Simulator::setdata() 	Selecting data
+2018-06-22 23:12:40	INFO	simutil::Simulator::setdata() 	Performing selection on MeasurementSet
+2018-06-22 23:12:40	INFO	simutil::Simulator::setdata() 	Selecting on field and spectral window ids
+2018-06-22 23:12:40	INFO	simutil::Simulator::setdata() 	No selection string given
+2018-06-22 23:12:40	INFO	simutil::Simulator::setdata() 	Selection did not drop any rows
+2018-06-22 23:12:40	INFO	simutil::Simulator::setvp()	Setting voltage pattern parameters
+2018-06-22 23:12:40	INFO	simutil::Simulator::setvp()	Beam Squint will be included in the VP model
+2018-06-22 23:12:40	INFO	simutil::Simulator::setvp()	and the parallactic angle increment is 360 degrees
+2018-06-22 23:12:40	INFO	simobserve::simobserve::	done setting up observations (blank visibilities)
+2018-06-22 23:12:40	INFO	simobserve::simobserve::	predicting from source.cl
+2018-06-22 23:12:40	INFO	simobserve::Simulator::predict() 	Predicting visibilities using model: [] and componentList: source.cl
+2018-06-22 23:12:40	INFO	simobserve::Simulator::predict() 	The data column will be replaced
+2018-06-22 23:12:40	INFO	simobserve::Simulator::getVPRecord 	Using Voltage Patterns from the VPManager
+2018-06-22 23:12:40	INFO	simobserve::Simulator::createSkyEquation() 	Synthesis gridding 
+2018-06-22 23:12:40	INFO	simobserve::Simulator::createSkyEquation() 	Fourier transforms will use image centers as tangent points
+2018-06-22 23:12:40	INFO	simobserve::VPSkyJones::VPSkyJones	PB used ALMA
+2018-06-22 23:12:40	INFO	simobserve::BeamSkyJones::summary	Beam Summary: 
+2018-06-22 23:12:40	INFO	simobserve::BeamSkyJones::summary	Model 1 for ALMA ant=-1 feed=-1 uses PB: AIRY
+2018-06-22 23:12:40	INFO	simobserve::PBMath1D::summary	Using AIRY PB Class 
+2018-06-22 23:12:40	INFO	simobserve::PBMathInterface::summary	These parameters are for Voltage Pattern
+2018-06-22 23:12:40	INFO	simobserve::PBMathInterface::summary	No Beam Squint
+2018-06-22 23:12:40	INFO	simobserve::PBMath1D::summary	Max Radius at 1 GHz: 107.04 arcmin 
+2018-06-22 23:12:40	INFO	simobserve::PBMath1DAiry::summary	   Dish Diameter: 10.7 m 
+2018-06-22 23:12:40	INFO	simobserve::PBMath1DAiry::summary	Blocked Diameter: 0.75 m 
+2018-06-22 23:12:47	INFO	simobserve::Simulator::reset() 	Resetting all visibility corruption components
+2018-06-22 23:12:47	INFO	simobserve::Simulator::reset() 	Reset all image-plane corruption components
+2018-06-22 23:12:48	INFO	simobserve::simobserve::	generation of measurement set simRan/simRan.alma.simRan0.ms complete
+2018-06-22 23:12:48	INFO	simobserve::::	Epoch: 56657::10:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::10:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::10:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::11:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::11:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::11:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::11:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::12:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::12:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::12:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::12:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::13:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::13:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::13:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::13:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::14:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::14:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::14:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::14:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::15:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::15:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::15:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::15:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::16:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::16:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::16:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::16:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::17:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::17:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::17:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::17:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::18:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::18:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::18:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::18:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::19:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::19:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::19:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::19:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::20:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::20:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::20:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::20:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::21:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::21:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::21:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::21:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::22:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::22:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::22:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::22:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::23:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::23:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::23:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::23:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::00:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::00:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::00:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::00:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::01:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::01:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::01:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::01:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::02:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::02:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::02:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::02:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::03:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::03:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::03:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::03:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::04:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::04:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::04:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::04:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::05:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::05:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::05:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::05:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::06:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::06:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::06:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::06:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::07:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::07:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::07:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::07:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::08:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::08:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::08:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::08:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::09:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::09:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::09:44:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::09:59:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::10:14:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	Position: [1761.87, -4307.63, -1977.71]
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56658::00:00:00.0000
+2018-06-22 23:12:48	INFO	simobserve::::+	Epoch: 56657::22:29:58.6019
+2018-06-22 23:12:48	INFO	simobserve::::+	LAST of rise= 16:40:11.51
+2018-06-22 23:12:48	INFO	simobserve::::	LAST of  set= 08:41:06.99
+2018-06-22 23:12:48	INFO	simobserve::::	UTC of rise= 2013/12/31/14:30:29
+2018-06-22 23:12:48	INFO	simobserve::::+	UTC of  set= 2014/01/01/06:28:47
+2018-06-22 23:12:48	INFO	simobserve::ephemeris::	peak=31-Dec-2013/22:29:59
+2018-06-22 23:12:48	INFO	simobserve::Imager::open() 	Opening MeasurementSet /home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/simRan/simRan.alma.simRan0.ms
+2018-06-22 23:12:48	INFO	simobserve::simobserve::	using default model cell {'value': 0.0865161433602, 'unit': 'arcsec'} for PSF calculation
+2018-06-22 23:12:48	INFO	simobserve::imager::defineimage()	Defining image properties:nx=128 ny=128 cellx='0.0865161arcsec' celly='0.0865161arcsec' stokes=I' mode=MFS nchan=-1 start=0 step=0 spwids=[0] fieldid=0 facets=1 frame=1 distance='0'
+2018-06-22 23:12:48	INFO	simobserve::imager::defineimage()	 phaseCenter='field-0 ' mStart='Radialvelocity: 0' qStep='0 '' mFreqStart='Frequency: 0
+2018-06-22 23:12:48	INFO	simobserve::imager::approximatepsfs() 	Calculating approximate PSFs using full sky equation
+2018-06-22 23:12:48	DEBUG1	simobserve::imager::make() (file ../../synthesis/MeasurementEquations/Imager.cc, line 6296)	Making empty image: simRan/simRan.alma.simRan0.quick.psf
+2018-06-22 23:12:48	DEBUG1	simobserve::Imager::imagecoordinates() (file ../../synthesis/MeasurementEquations/Imager2.cc, line 246)	Using observatory location of ALMA: WGS84 [1761.87, -4307.63, -1977.71] m
+2018-06-22 23:12:48	INFO3	simobserve::Imager::imagecoordinates() (file ../../synthesis/MeasurementEquations/Imager2.cc, line 246)	Center frequency = 100 GHz, synthesized continuum bandwidth = 0.2 GHz
+2018-06-22 23:12:48	DEBUG1	simobserve::Imager::imagecoordinates() (file ../../synthesis/MeasurementEquations/Imager2.cc, line 246)	Preferred polarization representation is linear
+2018-06-22 23:12:48	DEBUG1	simobserve::imager::createSkyEquation() (file ../../synthesis/MeasurementEquations/Imager2.cc, line 3141)	Preferred polarization representation is linear
+2018-06-22 23:12:48	DEBUG1	simobserve::imager::createSkyEquation() (file ../../synthesis/MeasurementEquations/Imager2.cc, line 3141)	Data PolRep in Imager2.cc::createSkyEquation : 1
+2018-06-22 23:12:48	INFO	simobserve::imager::createFTMachine() 	Performing interferometric gridding...
+2018-06-22 23:12:48	INFO1	simobserve::imager::createFTMachine() (file ../../synthesis/MeasurementEquations/Imager2.cc, line 2498)	...with convolution function SF
+2018-06-22 23:12:48	DEBUG1	simobserve::imager::createFTMachine() (file ../../synthesis/MeasurementEquations/Imager2.cc, line 2498)	Single facet Fourier transforms will use image center as tangent points
+2018-06-22 23:12:49	INFO	simobserve::ImageSkyModel::makeApproxPSFs	bmaj: 1.8507", bmin: 1.3871", bpa: -31.4249 deg
+2018-06-22 23:12:49	INFO	simobserve::imager::approximatepsfs() 	Approximate PSF  : size 1.8507 by 1.3871 (arcsec) at pa -31.4249 (deg)
+2018-06-22 23:12:49	INFO	simobserve::imager::approximatepsfs() +	and volume = 757.793 pixels 
+2018-06-22 23:12:49	INFO	simobserve::imager::fitpsf() 	Fitting to psf
+2018-06-22 23:12:49	INFO	simobserve::imager::fitpsf() 	  Beam fit: 1.8507 by 1.3871 (arcsec) at pa -31.4249 (deg) 
+2018-06-22 23:12:49	INFO3	simobserve::im::close	Flushing data to disk and detaching from file.
+2018-06-22 23:12:49	INFO	simobserve::CasacRegionManager::fromBCS	No directional region specified. Using full positional plane.
+2018-06-22 23:12:49	INFO	simobserve::CasacRegionManager::fromBCS	Using all spectral channels.
+2018-06-22 23:12:49	INFO	simobserve::CasacRegionManager::fromBCS	Using polarizations ALL
+2018-06-22 23:12:49	INFO	simobserve::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:12:49	INFO	simobserve::ImageRegion::fromRecord+	    [0, 0, 0, 0] to [127, 127, 0, 0]  (00:39:54.034, -50.01.19.644, I, 1e+11Hz to 00:39:52.894, -50.01.08.657, I, 1e+11Hz)
+2018-06-22 23:12:49	INFO	simobserve::noise::	copying simRan/simRan.alma.simRan0.ms to simRan/simRan.alma.simRan0.noisy.ms and adding thermal noise
+2018-06-22 23:12:49	INFO	simobserve::noise::	interpolated receiver temp=45
+2018-06-22 23:12:49	INFO	noise::NewMSSimulator::NewMSSimulator(MeasurementSet& theMS) 	Opening MeasurementSet /home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/simRan/simRan.alma.simRan0.noisy.ms with 13950 rows
+2018-06-22 23:12:49	INFO	noise::NewMSSimulator::NewMSSimulator(MeasurementSet& theMS) 	   last spectral window ID = 1
+2018-06-22 23:12:49	INFO	noise::Simulator::setdata() 	Selecting data
+2018-06-22 23:12:49	INFO	noise::Simulator::setdata() 	Performing selection on MeasurementSet
+2018-06-22 23:12:49	INFO	noise::Simulator::setdata() 	Selecting on spectral window id
+2018-06-22 23:12:49	INFO	noise::Simulator::setdata() 	No selection string given
+2018-06-22 23:12:49	INFO	noise::Simulator::setdata() 	Selection did not drop any rows
+2018-06-22 23:12:49	INFO	noise::Simulator::create_corrupt() 	Creating A NOISE Calibration structure for data corruption.
+2018-06-22 23:12:49	DEBUG1	noise::SVC[A Noise]::setSimulate() (file ../../synthesis/MeasurementComponents/SolvableVisCal.cc, line 627)	 using OTF simulation
+2018-06-22 23:12:49	INFO	noise::SVC::sizeUpSim() 	For simint = integration, found 1 solution intervals.
+2018-06-22 23:12:49	DEBUG1	noise::SVC::sizeUpSim() (file ../../synthesis/MeasurementComponents/SolvableVisCal.cc, line 1904)	spw 0 nPar=2nChanPar=1 nElem=496
+2018-06-22 23:12:49	DEBUG1	noise::SVC[A Noise]::setSimulate() (file ../../synthesis/MeasurementComponents/SolvableVisCal.cc, line 627)	 number of spw in VI (checking validity of mscolumns) = 1
+2018-06-22 23:12:49	DEBUG1	noise::SVC[A Noise]::setSimulate() (file ../../synthesis/MeasurementComponents/SolvableVisCal.cc, line 627)	 number of spw in VI (after resetting to origin = 1
+2018-06-22 23:12:49	INFO	noise::SVC[A Noise]::setSimulate() 	calTable name not set - not writing to disk (note: OTF sim - not creating Calset either)
+2018-06-22 23:12:49	INFO	noise::Simulator::setnoise2() 	adding noise with the sensitivity constant of 1/sqrt(2)
+2018-06-22 23:12:49	INFO	noise::Simulator::setnoise2() 	User has not set ground pressure, using 560mb
+2018-06-22 23:12:49	INFO	noise::Simulator::setnoise2() 	User has not set site altitude, using 5000m
+2018-06-22 23:12:49	INFO	noise::Simulator::setnoise2() 	User has not set water scale height, using 2km
+2018-06-22 23:12:49	INFO	noise::Simulator::create_corrupt() 	Creating TF NOISE Calibration structure for data corruption.
+2018-06-22 23:12:49	INFO	noise::SVC::sizeUpSim() 	For simint = integration, found 30 solution intervals.
+2018-06-22 23:12:49	DEBUG1	noise::SVC::sizeUpSim() (file ../../synthesis/MeasurementComponents/SolvableVisCal.cc, line 1904)	spw 0 nPar=1nChanPar=1 nElem=31
+2018-06-22 23:12:49	DEBUG1	noise::SVC::sizeUpSim() (file ../../synthesis/MeasurementComponents/SolvableVisCal.cc, line 1904)	 solveCPar shape = [1, 1, 31]
+2018-06-22 23:12:49	DEBUG1	noise::SVC[Tf Jones]::setSimulate() (file ../../synthesis/MeasurementComponents/SolvableVisCal.cc, line 627)	 number of spw in VI (checking validity of mscolumns) = 1
+2018-06-22 23:12:49	DEBUG1	noise::SVC[Tf Jones]::setSimulate() (file ../../synthesis/MeasurementComponents/SolvableVisCal.cc, line 627)	 number of spw in VI (after resetting to origin = 1
+2018-06-22 23:12:49	DEBUG1	noise::AtmCorr::initAtm (file ../../synthesis/MeasurementComponents/CalCorruptor.cc, line 369)	 defining observatory ground characteristics..
+2018-06-22 23:12:49	INFO	noise::AtmCorr::initAtm 	Initializing ATM
+2018-06-22 23:12:49	INFO	noise::AtmCorr::initAtm 	altitude=5000m, Pground=560mb, Tground=270K, humidity= 20%, water scale height=2000m
+2018-06-22 23:12:49	INFO	noise::AtmCorr::initAtm 	Spectral window 100(ch 5/10)
+2018-06-22 23:12:49	INFO	noise::AtmCorr::initAtm 	After setting WH2O to 5
+2018-06-22 23:12:49	INFO	noise::AtmCorr::initAtm 	Dry and Wet Opacity from RefractiveIndexProfile = 0.0111715, 0.0353835 at 100 GHz (ch0)
+2018-06-22 23:12:49	INFO	noise::AtmCorr::initAtm 	Dry and Wet Opacity from SkyStatus              = 0.0111715, 0.0353835
+2018-06-22 23:12:49	INFO	noise::AtmCorr::initAtm 	Sky plus ground and CMB Brightness Temp across Spw 0, for spill=0.95 Tground=270 pwv=5
+2018-06-22 23:12:49	INFO	noise::AtmCorr::initAtm 	 Zenith Tebb[99.9,100,100.08]=[27.5747,27.6059,27.6344]
+2018-06-22 23:12:49	INFO	noise::AtmCorr::init(vi,par,type) 	Zenith Tsys at center of first Spectral Window = 73.6237 tground=270 spillover=0.95
+2018-06-22 23:12:49	INFO	noise::AtmCorr::init(vi,par,type) 	 pwv=5 tau=0.046555(ch0)
+2018-06-22 23:12:49	DEBUG1	noise::AtmCorr::init(vi,par,type) (file ../../synthesis/MeasurementComponents/CalCorruptor.cc, line 616)	 noise ~ 6.17405e+06*Tsys/D^2/sqrt(dnu dt)/Nant
+2018-06-22 23:12:49	INFO	noise::SVC[Tf Jones]::setSimulate() 	Calculating corruption terms for simulated Tf Jones: output table=simRan/simRan.alma.simRan0.noisy.T.cal simint=integration t=0
+2018-06-22 23:12:50	INFO	noise::SVC[Tf Jones]::setSimulate() 	Writing calTable = simRan/simRan.alma.simRan0.noisy.T.cal (Tf Jones)
+2018-06-22 23:12:50	INFO	noise::::	Writing solutions to table: simRan/simRan.alma.simRan0.noisy.T.cal
+2018-06-22 23:12:51	INFO	noise::Simulator::corrupt() 	Doing visibility corruption.
+2018-06-22 23:12:51	INFO	noise::Simulator::corrupt() 	simulated A Noise: output table=<none> simint=integration t=0spwok = [1] in correct mode.
+2018-06-22 23:12:51	INFO	noise::Simulator::corrupt() 	simulated Tf Jones: output table=simRan/simRan.alma.simRan0.noisy.T.cal simint=integration t=0spwok = [1] in corrupt mode.
+2018-06-22 23:12:51	INFO	noise::Simulator::reset() 	Resetting all visibility corruption components
+2018-06-22 23:12:51	INFO	noise::Simulator::reset() 	Reset all image-plane corruption components
+2018-06-22 23:12:51	INFO	simalma::simutil::	 
+2018-06-22 23:12:51	INFO	simalma::simalma::	------------------------------------------------------------
+2018-06-22 23:12:51	INFO	simalma::simalma::	Step 2: imaging and analyzing alma.simRan0.cfg
+2018-06-22 23:12:51	WARN	simalma::simalma::	  This step is optional, but useful to assess the result from just one configuration.
+2018-06-22 23:12:51	WARN	simalma::simalma::	  WARNING: The example clean shown here uses no mask, may diverge, and almost certainly is not optimal.
+2018-06-22 23:12:51	WARN	simalma::simalma::	  Users are HIGHLY recommended to use interactive clean masking (in simanalyze or directly in clean)
+2018-06-22 23:12:51	WARN	simalma::simalma::	  Auto-masking is under development for use in the ALMA pipeline and will be included here in a future release
+2018-06-22 23:12:51	INFO	simalma::simalma::	------------------------------------------------------------
+2018-06-22 23:12:51	INFO	simalma::simutil::	simanalyze(cell='0.2arcsec', analyze=True, dryrun=False, verbose=False, niter=2000, stokes='I', image=True, outertaper=[], mask=[], project='simRan', vis='simRan.alma.simRan0.noisy.ms', logfile='simRan/simRan.simalma.report.txt', imdirection='J2000 00:40:00.14328 -049.59.59.730000', graphics='both', threshold='0.01mJy', weighting='briggs', modelimage='', overwrite=True, imsize=[750])
+2018-06-22 23:12:51	INFO3	simanalyze::utils::verify	Verifying arguments....verified.
+2018-06-22 23:12:51	INFO3	simanalyze::utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:12:51	INFO	simanalyze::simanalyze::	Found a synthesis measurement set, simRan/simRan.alma.simRan0.noisy.ms.
+2018-06-22 23:12:51	INFO	simanalyze::simanalyze::	Sky model image simRan/simRan.alma.simRan0.compskymodel found.
+2018-06-22 23:12:51	INFO	simanalyze::simutil::	clean(vis='simRan/simRan.alma.simRan0.noisy.ms',imagename='simRan/simRan.alma.0.noisy',niter=2000,threshold='0.01mJy',psfmode='clark',imagermode='mosaic',ftmachine='mosaic',mask=[],imsize=[750, 750],cell=['0.2arcsec','0.2arcsec'],phasecenter='J2000 00:40:00.14328 -049.59.59.730000',weighting='briggs',robust=0.5,uvtaper=False,pbcor=True)
+2018-06-22 23:12:59	INFO	ImageFactory::fromImage	Created image 'simRan/simRan.alma.0.noisy.image.flat' of shape [750, 750]
+2018-06-22 23:13:00	INFO	image::_adddegaxes 	Creating image 'simRan/simRan.alma.0.noisy.image.flat' of shape [750, 750, 1]
+2018-06-22 23:13:01	INFO	ImageFactory::fromImage	Created image 'simRan/simRan.alma.0.noisy.residual.flat' of shape [750, 750]
+2018-06-22 23:13:01	INFO	image::_adddegaxes 	Creating image 'simRan/simRan.alma.0.noisy.residual.flat' of shape [750, 750, 1]
+2018-06-22 23:13:02	INFO	clean::simanalyze::	done inverting and cleaning
+2018-06-22 23:13:02	INFO	clean::simanalyze::	synthesized beam area in output pixels = 65.973256
+2018-06-22 23:13:02	INFO	simanalyze::BeamManipulator::set	Setting (global) restoring beam.
+2018-06-22 23:13:02	INFO	simanalyze::BeamManipulator::set	Beam parameters:  Major          : 1.7741 arcsec
+2018-06-22 23:13:02	INFO	simanalyze::BeamManipulator::set+	  Minor          : 1.31275 arcsec
+2018-06-22 23:13:02	INFO	simanalyze::BeamManipulator::set+	  Position Angle : -28.1092 deg
+2018-06-22 23:13:02	INFO	simanalyze::CasacRegionManager::fromBCS	No directional region specified. Using full positional plane.
+2018-06-22 23:13:02	INFO	simanalyze::CasacRegionManager::fromBCS	Using polarizations ALL
+2018-06-22 23:13:02	INFO	simanalyze::ImageMaskAttacher::makeMask	Created and initialized mask `mask0'
+2018-06-22 23:13:02	INFO	simanalyze::ImageRegrid::_checkAxes 	The Stokes axis cannot be regridded - removing from list
+2018-06-22 23:13:02	WARN	simanalyze::ImageRegrid::regrid	You are regridding an image whose beam is not well sampled by the pixel size.  Total flux can be lost when regridding such images, especially when the new pixel size is larger than the old pixel size. It is recommended to check the total flux of your input and output image, and if necessary rebin the input to have smaller pixels.
+2018-06-22 23:13:02	INFO	simanalyze::ImageRegrid::regrid 	Applying Jy/pixel scale factor of 5.34399
+2018-06-22 23:13:02	INFO	simanalyze::SubImageFactory::createImage	Creating image 'simRan/simRan.alma.simRan0.compskymodel.flat.regrid.tmp' of shape [750, 750, 1]
+2018-06-22 23:13:03	INFO	simanalyze::ImageExprCalculator::_imagecalc	Creating image `simRan/simRan.alma.simRan0.compskymodel.flat.regrid' of shape [750, 750, 1]
+2018-06-22 23:13:03	INFO	simanalyze::Image2DConvolver::_dealWithRestoringBeam	You are convolving the sky
+2018-06-22 23:13:03	INFO	simanalyze::Image2DConvolver::_dealWithRestoringBeam	Scaling pixel values by 1
+2018-06-22 23:13:04	INFO	simanalyze::Image2DConvolver::_dealWithRestoringBeam	Original /home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/simRan/simRan.alma.simRan0.compskymodel.flat.regrid resolution major: 1.7741 arcsec, minor: 1.31275 arcsec, pa: -28.1092 deg
+2018-06-22 23:13:04	INFO	simanalyze::Image2DConvolver::_dealWithRestoringBeam	Output simRan/simRan.alma.simRan0.compskymodel.flat.regrid.conv resolution major: 1.7741 arcsec, minor: 1.31275 arcsec, pa: -28.1092 deg
+2018-06-22 23:13:04	INFO	simanalyze::SubImageFactory::createImage	Creating image 'simRan/simRan.alma.simRan0.compskymodel.flat.regrid.conv' of shape [750, 750, 1]
+2018-06-22 23:13:04	INFO	simanalyze::BeamManipulator::set	Setting (global) restoring beam.
+2018-06-22 23:13:04	INFO	simanalyze::BeamManipulator::set	Beam parameters:  Major          : 1.7741 arcsec
+2018-06-22 23:13:04	INFO	simanalyze::BeamManipulator::set+	  Minor          : 1.31275 arcsec
+2018-06-22 23:13:04	INFO	simanalyze::BeamManipulator::set+	  Position Angle : -28.1092 deg
+2018-06-22 23:13:04	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:04	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:04	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:04	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:04	INFO1	simanalyze::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:13:04	DEBUG1	simanalyze::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:13:05	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:05	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:05	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:05	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:05	INFO1	simanalyze::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:13:05	DEBUG1	simanalyze::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:13:05	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:05	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:05	INFO	simanalyze::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:05	INFO	simanalyze::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:05	INFO1	simanalyze::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:13:05	DEBUG1	simanalyze::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:13:05	INFO	clean::statim::	simRan/simRan.alma.0.noisy.residual.flat: unknown units
+2018-06-22 23:13:05	INFO	statim::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:05	INFO	statim::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:05	INFO	statim::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:05	INFO	statim::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:05	INFO1	statim::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:13:05	DEBUG1	statim::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:13:05	INFO	statim::ImageExprCalculator::_imagecalc	Creating image `simRan/simRan.alma.0.noisy.diff' of shape [750, 750, 1]
+2018-06-22 23:13:06	INFO	statim::ImageExprCalculator::_imagecalc	Creating image `simRan/simRan.alma.0.noisy.absdiff' of shape [750, 750, 1]
+2018-06-22 23:13:07	INFO	statim::ImageExprCalculator::_imagecalc	Creating image `simRan/simRan.alma.0.noisy.fidelity' of shape [750, 750, 1]
+2018-06-22 23:13:07	INFO	clean::analysis::	fidelity image calculated
+2018-06-22 23:13:08	INFO	analysis::ImageExprCalculator::_imagecalc	Creating image `simRan/simRan.alma.0.noisy.absconv' of shape [750, 750, 1]
+2018-06-22 23:13:08	INFO	clean::analysis::	fidelity range (max model / rms difference) = 80.6569756313
+2018-06-22 23:13:08	INFO	analysis::CasacRegionManager::fromBCS	No directional region specified. Using full positional plane.
+2018-06-22 23:13:08	INFO	analysis::CasacRegionManager::fromBCS	Using all spectral channels.
+2018-06-22 23:13:08	INFO	analysis::CasacRegionManager::fromBCS	Using polarizations ALL
+2018-06-22 23:13:08	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:08	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0, 0] to [749, 749, 0, 0]  (00:40:07.925, -50.01.14.714, I, 1e+11Hz to 00:39:52.389, -49.58.44.914, I, 1e+11Hz)
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:09	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:13:09	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:09	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:13:09	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:09	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:13:09	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:09	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:09	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:13:09	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:13:10	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:10	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:10	INFO	analysis::ImageRegion::fromRecord	Selected bounding box : 
+2018-06-22 23:13:10	INFO	analysis::ImageRegion::fromRecord+	    [0, 0, 0] to [749, 749, 0]  (00:40:07.925, -50.01.14.714, I to 00:39:52.389, -49.58.44.914, I)
+2018-06-22 23:13:10	INFO1	analysis::ImageHistogramsCalculator::compute	Creating new statistics storage lattice of shape [12]
+2018-06-22 23:13:10	DEBUG1	analysis::ImageHistogramsCalculator::compute	Creating new histogram storage lattice
+2018-06-22 23:13:10	INFO	clean::analysis::	Simulation rms: [  3.02374035e-05] Jy/pix = [ 0.00199486] Jy/bm
+2018-06-22 23:13:10	INFO	clean::analysis::	Simulation max: [ 0.00102792] Jy/pix = [ 0.06781526] Jy/bm
+2018-06-22 23:13:10	INFO	clean::analysis::	Beam bmaj: 1.77409625053 bmin: 1.31275141239 bpa: -28.1091899872
+2018-06-22 23:13:10	INFO	analysis::name::	No table opened.
+2018-06-22 23:13:10	INFO	simalma::::	##### End Task: simalma              #####
+2018-06-22 23:13:10	INFO	simalma::::+	##########################################
+2018-06-22 23:13:10	INFO3	utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:13:10	INFO3	exportfits::utils::verify	Verifying arguments....verified.
+2018-06-22 23:13:10	INFO3	exportfits::utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:13:10	INFO	exportfits::::	
+2018-06-22 23:13:10	INFO	exportfits::::+	##########################################
+2018-06-22 23:13:10	INFO	exportfits::::+	##### Begin Task: exportfits         #####
+2018-06-22 23:13:10	INFO	exportfits::::	exportfits(imagename="/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/simRan/simRan.alma.0.noisy.image",fitsimage="/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/products/simRan.image.fits.0",velocity=False,optical=False,bitpix=-32,
+2018-06-22 23:13:10	INFO	exportfits::::+	        minpix=0,maxpix=-1,overwrite=True,dropstokes=False,stokeslast=True,
+2018-06-22 23:13:10	INFO	exportfits::::+	        history=True,dropdeg=False)
+2018-06-22 23:13:10	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2018-06-22 23:13:10	DEBUG1	exportfits::FITSCoordinateUtil::toFITSHeader (file ../../coordinates/Coordinates/FITSCoordinateUtil.cc, line 81)	Identified axis number 2 as latitude axis for WCS. pv2_ is the keyword name.
+2018-06-22 23:13:10	INFO	exportfits::::	##### End Task: exportfits           #####
+2018-06-22 23:13:10	INFO	exportfits::::+	##########################################
+2018-06-22 23:13:10	INFO3	utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:13:10	INFO3	exportfits::utils::verify	Verifying arguments....verified.
+2018-06-22 23:13:10	INFO3	exportfits::utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:13:10	INFO	exportfits::::	
+2018-06-22 23:13:10	INFO	exportfits::::+	##########################################
+2018-06-22 23:13:10	INFO	exportfits::::+	##### Begin Task: exportfits         #####
+2018-06-22 23:13:10	INFO	exportfits::::	exportfits(imagename="/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/simRan/simRan.alma.simRan0.compskymodel.flat.regrid.conv",fitsimage="/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/products/simRan.compskymodel.flat.regrid.conv.fits.0",velocity=False,optical=False,bitpix=-32,
+2018-06-22 23:13:10	INFO	exportfits::::+	        minpix=0,maxpix=-1,overwrite=True,dropstokes=False,stokeslast=True,
+2018-06-22 23:13:10	INFO	exportfits::::+	        history=True,dropdeg=False)
+2018-06-22 23:13:10	DEBUG1	exportfits::FITSCoordinateUtil::toFITSHeader (file ../../coordinates/Coordinates/FITSCoordinateUtil.cc, line 81)	Identified axis number 2 as latitude axis for WCS. pv2_ is the keyword name.
+2018-06-22 23:13:10	INFO	exportfits::::	##### End Task: exportfits           #####
+2018-06-22 23:13:10	INFO	exportfits::::+	##########################################
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	DEBUG1	componentlist::setspectrum	index: 1
+2018-06-22 23:13:10	INFO3	utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:13:10	INFO3	simalma::utils::verify	Verifying arguments....verified.
+2018-06-22 23:13:10	INFO3	simalma::utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:13:10	INFO	simalma::::	
+2018-06-22 23:13:10	INFO	simalma::::+	##########################################
+2018-06-22 23:13:10	INFO	simalma::::+	##### Begin Task: simalma            #####
+2018-06-22 23:13:10	INFO	simalma::::	simalma(project="arrTarget",dryrun=False,skymodel="",inbright="",indirection="",
+2018-06-22 23:13:10	INFO	simalma::::+	        incell="",incenter="",inwidth="",complist="source.cl",compwidth="200MHz",
+2018-06-22 23:13:10	INFO	simalma::::+	        setpointings=True,ptgfile="$project.ptg.txt",integration="10s",direction="",mapsize="150arcsec",
+2018-06-22 23:13:10	INFO	simalma::::+	        antennalist="/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg",hourangle="transit",totaltime="300s",tpnant=0,tptime="0s",
+2018-06-22 23:13:10	INFO	simalma::::+	        pwv=5.0,image=True,imsize=750,imdirection="",cell="0.2arcsec",
+2018-06-22 23:13:10	INFO	simalma::::+	        niter=2000,threshold="0.01mJy",graphics="both",verbose=False,overwrite=True)
+2018-06-22 23:13:10	INFO	simalma::::	Project directory, 'arrTarget', already exists.
+2018-06-22 23:13:10	INFO	simalma::::	Removing old project directory 'arrTarget'
+2018-06-22 23:13:10	INFO3	simalma::utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:13:10	INFO	simalma::simutil::	============================================================
+2018-06-22 23:13:10	INFO	simalma::simalma::	Checking the sky model
+2018-06-22 23:13:10	INFO	simalma::simutil::	 
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632879, 0.111685, -0.766153]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633101, 0.111502, -0.765996]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632958, 0.111504, -0.766114]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633101, 0.111841, -0.765947]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633068, 0.111522, -0.766021]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632912, 0.111381, -0.76617]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633224, 0.11143, -0.765905]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.63316, 0.111575, -0.765937]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633007, 0.111803, -0.76603]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632947, 0.11136, -0.766144]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633016, 0.111521, -0.766064]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633186, 0.111628, -0.765908]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633121, 0.111888, -0.765923]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633255, 0.111413, -0.765882]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633013, 0.111719, -0.766038]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633093, 0.111801, -0.765959]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633127, 0.111626, -0.765957]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633002, 0.111513, -0.766077]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632812, 0.111769, -0.766196]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632999, 0.111559, -0.766072]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632892, 0.111594, -0.766155]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633075, 0.111643, -0.765997]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633258, 0.111443, -0.765875]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633184, 0.111864, -0.765875]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632889, 0.111649, -0.76615]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633106, 0.11156, -0.765984]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633053, 0.111645, -0.766015]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632837, 0.11175, -0.766178]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632794, 0.111821, -0.766204]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632821, 0.111803, -0.766184]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.63279, 0.111678, -0.766227]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632803, 0.111586, -0.766231]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633019, 0.111697, -0.766035]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633153, 0.1119, -0.765895]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632897, 0.111719, -0.766133]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633127, 0.111801, -0.765931]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632946, 0.111691, -0.766097]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632837, 0.111709, -0.766185]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632943, 0.111465, -0.766132]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633102, 0.111445, -0.766004]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632825, 0.111499, -0.766225]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633242, 0.11154, -0.765874]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632933, 0.111814, -0.766089]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633126, 0.111791, -0.765933]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633158, 0.111437, -0.765959]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633158, 0.111741, -0.765914]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632846, 0.111419, -0.766219]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.63315, 0.11182, -0.76591]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.63294, 0.111406, -0.766143]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633009, 0.111365, -0.766093]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633074, 0.111448, -0.766026]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633098, 0.111906, -0.76594]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632836, 0.111849, -0.766164]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632886, 0.111628, -0.766155]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633089, 0.111819, -0.76596]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633116, 0.111567, -0.765975]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633153, 0.111519, -0.765951]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633159, 0.111444, -0.765957]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632839, 0.111698, -0.766185]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633081, 0.111504, -0.766013]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632942, 0.111879, -0.766072]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632809, 0.111568, -0.766228]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633084, 0.111351, -0.766032]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633038, 0.111499, -0.766049]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.63288, 0.111807, -0.766134]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632982, 0.111834, -0.766047]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633049, 0.111366, -0.766059]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632895, 0.1115, -0.766167]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632929, 0.111442, -0.766148]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633171, 0.111805, -0.765894]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.63298, 0.111357, -0.766117]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633137, 0.111548, -0.76596]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632996, 0.111689, -0.766056]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633067, 0.111856, -0.765973]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633197, 0.111689, -0.76589]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.63315, 0.111644, -0.765936]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632905, 0.111829, -0.766111]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633172, 0.111456, -0.765945]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632898, 0.111461, -0.76617]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633042, 0.111568, -0.766035]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633151, 0.111538, -0.76595]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632913, 0.111761, -0.766114]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632873, 0.111716, -0.766153]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633022, 0.111651, -0.76604]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633199, 0.111756, -0.765878]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633148, 0.111501, -0.765958]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633157, 0.111545, -0.765943]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632834, 0.11173, -0.766184]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632887, 0.111367, -0.766193]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633227, 0.111682, -0.765866]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633047, 0.111873, -0.765987]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633039, 0.111664, -0.766024]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632833, 0.111631, -0.766199]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632855, 0.111482, -0.766203]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.63322, 0.111769, -0.765859]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632904, 0.111444, -0.766168]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632941, 0.1115, -0.766129]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632943, 0.111882, -0.766071]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.632961, 0.111445, -0.766121]
+2018-06-22 23:13:10	INFO3	simutil::componentlist::getrefdir	Direction: [0.633146, 0.111632, -0.76594]
+2018-06-22 23:13:11	INFO	simalma::simutil::	You will be simulating only from component list source.cl
+2018-06-22 23:13:11	INFO	simalma::simutil::	Based on the spatial distribution of components, a sky model image will be generated with these parameters:
+2018-06-22 23:13:11	INFO	simalma::simutil::	  image size          = 0.033406000deg
+2018-06-22 23:13:11	INFO	simalma::simutil::	  reference direction = J2000 00:40:00.12768 -050.00.00.730800
+2018-06-22 23:13:11	INFO	simalma::simutil::	and each call to simobserve will chose a skymodel cell size of 1/20 the expected PSF FWHM (to accurately locate components).
+2018-06-22 23:13:11	INFO	simalma::simutil::	Simulation from components-only produces a single channel / continuum observation
+2018-06-22 23:13:11	INFO	simalma::simutil::	  with bandwidth = 200MHz
+2018-06-22 23:13:11	INFO	simalma::simutil::	 
+2018-06-22 23:13:11	INFO	simalma::simutil::	You will be mapping an area of size 150.000000000arcsec,150.000000000arcsec
+2018-06-22 23:13:11	INFO	simalma::simutil::	  primary beam size: 58.229485058arcsec
+2018-06-22 23:13:11	INFO	simalma::simutil::	 
+2018-06-22 23:13:11	INFO	simalma::simutil::	============================================================
+2018-06-22 23:13:11	INFO	simalma::simalma::	You are requesting 1 configurations:
+2018-06-22 23:13:11	INFO	simalma::readantenna::	Reading antenna positions from '/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg'
+2018-06-22 23:13:11	INFO	simalma::readantenna::	Reading antenna positions from '/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg'
+2018-06-22 23:13:11	INFO	simalma::simutil::	  
+2018-06-22 23:13:11	INFO	simalma::simutil::	  /home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg:
+2018-06-22 23:13:11	INFO	simalma::simutil::	    12m ALMA array
+2018-06-22 23:13:11	INFO	simalma::simutil::	    This is a cycle 1 configuration
+2018-06-22 23:13:11	INFO	simalma::simutil::	    approximate synthesized beam FWHM = 2.152540 arcsec
+2018-06-22 23:13:11	INFO	simalma::simutil::	       (at zenith; the actual beam will depend on declination, hourangle, and uv coverage)
+2018-06-22 23:13:11	INFO	simalma::simutil::	    Observation time = 5.000000 min
+2018-06-22 23:13:11	INFO	simalma::simutil::	
+2018-06-22 23:13:11	INFO	simalma::simutil::	============================================================
+2018-06-22 23:13:11	INFO	simalma::simalma::	simalma calls simobserve to simulate each component:
+2018-06-22 23:13:11	INFO	simalma::simutil::	
+2018-06-22 23:13:11	WARN	simalma::simalma::	------------------------------------------------------------
+2018-06-22 23:13:11	WARN	simalma::simalma::	Step 1: simulating 12m ALMA array
+2018-06-22 23:13:11	WARN	simalma::simalma::	------------------------------------------------------------
+2018-06-22 23:13:11	INFO	simalma::simutil::	simobserve(antennalist=/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg, verbose=False, incell='', leakage=0.0, overwrite=True, calflux='0Jy', integration='10s', pointingspacing='0.510929441761PB', sdant=0, complist='source.cl', direction=[''], caldirection='', t_ground=270.0, compwidth='200MHz', sdantlist='', maptype='ALMA', graphics='both', inbright='', inwidth='', skymodel='', thermalnoise='tsys-atm', totaltime='5.000000min', hourangle='transit', ptgfile='$project.ptg.txt', obsmode='int', project='arrTarget', indirection='', user_pwv=5.0, mapsize=['150arcsec', '150arcsec'], incenter='', setpointings=True)
+2018-06-22 23:13:11	INFO3	simobserve::utils::verify	Verifying arguments....verified.
+2018-06-22 23:13:11	INFO3	simobserve::utils::setconstraints	Setting constraints ...Constraints set.
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632879, 0.111685, -0.766153]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633101, 0.111502, -0.765996]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632958, 0.111504, -0.766114]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633101, 0.111841, -0.765947]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633068, 0.111522, -0.766021]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632912, 0.111381, -0.76617]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633224, 0.11143, -0.765905]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63316, 0.111575, -0.765937]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633007, 0.111803, -0.76603]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632947, 0.11136, -0.766144]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633016, 0.111521, -0.766064]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633186, 0.111628, -0.765908]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633121, 0.111888, -0.765923]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633255, 0.111413, -0.765882]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633013, 0.111719, -0.766038]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633093, 0.111801, -0.765959]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633127, 0.111626, -0.765957]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633002, 0.111513, -0.766077]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632812, 0.111769, -0.766196]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632999, 0.111559, -0.766072]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632892, 0.111594, -0.766155]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633075, 0.111643, -0.765997]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633258, 0.111443, -0.765875]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633184, 0.111864, -0.765875]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632889, 0.111649, -0.76615]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633106, 0.11156, -0.765984]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633053, 0.111645, -0.766015]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632837, 0.11175, -0.766178]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632794, 0.111821, -0.766204]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632821, 0.111803, -0.766184]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63279, 0.111678, -0.766227]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632803, 0.111586, -0.766231]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633019, 0.111697, -0.766035]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633153, 0.1119, -0.765895]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632897, 0.111719, -0.766133]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633127, 0.111801, -0.765931]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632946, 0.111691, -0.766097]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632837, 0.111709, -0.766185]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632943, 0.111465, -0.766132]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633102, 0.111445, -0.766004]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632825, 0.111499, -0.766225]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633242, 0.11154, -0.765874]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632933, 0.111814, -0.766089]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633126, 0.111791, -0.765933]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633158, 0.111437, -0.765959]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633158, 0.111741, -0.765914]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632846, 0.111419, -0.766219]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63315, 0.11182, -0.76591]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63294, 0.111406, -0.766143]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633009, 0.111365, -0.766093]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633074, 0.111448, -0.766026]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633098, 0.111906, -0.76594]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632836, 0.111849, -0.766164]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632886, 0.111628, -0.766155]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633089, 0.111819, -0.76596]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633116, 0.111567, -0.765975]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633153, 0.111519, -0.765951]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633159, 0.111444, -0.765957]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632839, 0.111698, -0.766185]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633081, 0.111504, -0.766013]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632942, 0.111879, -0.766072]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632809, 0.111568, -0.766228]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633084, 0.111351, -0.766032]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633038, 0.111499, -0.766049]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63288, 0.111807, -0.766134]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632982, 0.111834, -0.766047]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633049, 0.111366, -0.766059]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632895, 0.1115, -0.766167]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632929, 0.111442, -0.766148]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633171, 0.111805, -0.765894]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63298, 0.111357, -0.766117]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633137, 0.111548, -0.76596]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632996, 0.111689, -0.766056]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633067, 0.111856, -0.765973]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633197, 0.111689, -0.76589]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63315, 0.111644, -0.765936]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632905, 0.111829, -0.766111]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633172, 0.111456, -0.765945]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632898, 0.111461, -0.76617]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633042, 0.111568, -0.766035]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633151, 0.111538, -0.76595]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632913, 0.111761, -0.766114]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632873, 0.111716, -0.766153]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633022, 0.111651, -0.76604]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633199, 0.111756, -0.765878]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633148, 0.111501, -0.765958]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633157, 0.111545, -0.765943]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632834, 0.11173, -0.766184]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632887, 0.111367, -0.766193]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633227, 0.111682, -0.765866]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633047, 0.111873, -0.765987]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633039, 0.111664, -0.766024]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632833, 0.111631, -0.766199]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632855, 0.111482, -0.766203]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.63322, 0.111769, -0.765859]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632904, 0.111444, -0.766168]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632941, 0.1115, -0.766129]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632943, 0.111882, -0.766071]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.632961, 0.111445, -0.766121]
+2018-06-22 23:13:11	INFO3	simobserve::componentlist::getrefdir	Direction: [0.633146, 0.111632, -0.76594]
+2018-06-22 23:13:11	INFO	simobserve::readantenna::	Reading antenna positions from '/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg'
+2018-06-22 23:13:11	INFO	simobserve::readantenna::	Reading antenna positions from '/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg'
+2018-06-22 23:13:11	INFO	readantenna::::	Created Paged image 'arrTarget/arrTarget.alma.cycle1.3.compskymodel' of shape [1676, 1676, 1, 1] with float valued pixels.
+2018-06-22 23:13:11	INFO	readantenna::ComponentImager::project	Adding components to image with units [Jy/pixel.pixel]
+2018-06-22 23:13:36	INFO	readantenna::ImageFactory::fromImage	Created image 'arrTarget/arrTarget.alma.cycle1.3.compskymodel.flat' of shape [1676, 1676]
+2018-06-22 23:13:36	INFO	readantenna::image::_adddegaxes 	Creating image 'arrTarget/arrTarget.alma.cycle1.3.compskymodel.flat' of shape [1676, 1676, 1]
+2018-06-22 23:13:37	INFO	simobserve::simobserve::	calculating map pointings centered at J2000 00:40:00.12768 -050.00.00.730800
+2018-06-22 23:13:37	INFO	simobserve::calc_pointings::	using 33 generated pointing(s)
+2018-06-22 23:13:37	INFO	simobserve::simobserve::	center = J2000 00:39:58.79214 -050.00.00.730800
+2018-06-22 23:13:37	INFO	simobserve::simobserve::	preparing empty measurement set
+2018-06-22 23:13:37	INFO	simobserve::simobserve::	You desire an hour angle of 0.0 hours
+2018-06-22 23:13:40	INFO	simobserve::NewMSSimulator::initAnt() 	Using global coordinates for the antennas
+2018-06-22 23:13:40	INFO	simobserve::NewMSSimulator::initAnt() 	Added rows to ANTENNA table
+2018-06-22 23:13:40	INFO	simobserve::MSsimulator::initSpWindows() 	Creating new spectral window band1, ID 1
+2018-06-22 23:13:40	INFO	simobserve::MSsimulator::initFeeds() 	Added rows to FEED table
+2018-06-22 23:13:40	INFO	simobserve::simulator::settimes()	Times 
+2018-06-22 23:13:40	INFO	simobserve::simulator::settimes()+	     Integration time 10s
+2018-06-22 23:13:40	INFO	simobserve::simulator::settimes()	     Times will be interpreted as hour angles for first source
+2018-06-22 23:13:40	WARN	simobserve::simutil::	Not all pointings in the mosaic will be observed - check mosaic setup and exposure time parameters!
+2018-06-22 23:13:40	INFO	simutil::NewMSSimulator::observe()	First source: arrTarget.alma.cycle1.3_0 @ 00:39:53.44   -50.01.15.11       J2000
+2018-06-22 23:13:40	INFO	simutil::NewMSSimulator::observe()+	Full time range: 31-Dec-2013/22:27:21.7 -- 31-Dec-2013/22:32:21.7 TAI with int = 10
+2018-06-22 23:13:40	INFO	simutil::NewMSSimulator::observe()	Calculating a total of 30 integrations
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()	   Field 0: arrTarget.alma.cycle1.3_0 @ 00:39:53.44   -50.01.15.11       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 1: arrTarget.alma.cycle1.3_1 @ 00:39:53.45   -50.00.45.36       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 2: arrTarget.alma.cycle1.3_2 @ 00:39:53.45   -50.00.15.61       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 3: arrTarget.alma.cycle1.3_3 @ 00:39:53.45   -49.59.45.86       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 4: arrTarget.alma.cycle1.3_4 @ 00:39:53.45   -49.59.16.10       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 5: arrTarget.alma.cycle1.3_5 @ 00:39:53.45   -49.58.46.35       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 6: arrTarget.alma.cycle1.3_6 @ 00:39:56.12   -50.01.00.23       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 7: arrTarget.alma.cycle1.3_7 @ 00:39:56.12   -50.00.30.48       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 8: arrTarget.alma.cycle1.3_8 @ 00:39:56.12   -50.00.00.73       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 9: arrTarget.alma.cycle1.3_9 @ 00:39:56.12   -49.59.30.98       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 10: arrTarget.alma.cycle1.3_10 @ 00:39:56.12   -49.59.01.23       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 11: arrTarget.alma.cycle1.3_11 @ 00:39:58.79   -50.01.15.11       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 12: arrTarget.alma.cycle1.3_12 @ 00:39:58.79   -50.00.45.36       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 13: arrTarget.alma.cycle1.3_13 @ 00:39:58.79   -50.00.15.61       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 14: arrTarget.alma.cycle1.3_14 @ 00:39:58.79   -49.59.45.86       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 15: arrTarget.alma.cycle1.3_15 @ 00:39:58.79   -49.59.16.10       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 16: arrTarget.alma.cycle1.3_16 @ 00:39:58.79   -49.58.46.35       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 17: arrTarget.alma.cycle1.3_17 @ 00:40:01.46   -50.01.00.23       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 18: arrTarget.alma.cycle1.3_18 @ 00:40:01.46   -50.00.30.48       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   Field 19: arrTarget.alma.cycle1.3_19 @ 00:40:01.46   -50.00.00.73       J2000 for 1 integrations 
+2018-06-22 23:13:40	DEBUG1	simutil::NewMSSimulator::observe()+	   (continuing without printing to log -- see MS for details) 
+2018-06-22 23:13:41	INFO	simutil::Simulator::setdata() 	Selecting data
+2018-06-22 23:13:41	INFO	simutil::Simulator::setdata() 	Performing selection on MeasurementSet
+2018-06-22 23:13:41	INFO	simutil::Simulator::setdata() 	Selecting on field and spectral window ids
+2018-06-22 23:13:41	INFO	simutil::Simulator::setdata() 	No selection string given
+2018-06-22 23:13:41	INFO	simutil::Simulator::setdata() 	Selection did not drop any rows
+2018-06-22 23:13:41	INFO	simutil::Simulator::setvp()	Setting voltage pattern parameters
+2018-06-22 23:13:41	INFO	simutil::Simulator::setvp()	Beam Squint will be included in the VP model
+2018-06-22 23:13:41	INFO	simutil::Simulator::setvp()	and the parallactic angle increment is 360 degrees
+2018-06-22 23:13:41	INFO	simobserve::simobserve::	done setting up observations (blank visibilities)
+2018-06-22 23:13:41	INFO	simobserve::simobserve::	predicting from source.cl
+2018-06-22 23:13:41	INFO	simobserve::Simulator::predict() 	Predicting visibilities using model: [] and componentList: source.cl
+2018-06-22 23:13:41	INFO	simobserve::Simulator::predict() 	The data column will be replaced
+2018-06-22 23:13:41	INFO	simobserve::Simulator::getVPRecord 	Using Voltage Patterns from the VPManager
+2018-06-22 23:13:41	INFO	simobserve::Simulator::createSkyEquation() 	Synthesis gridding 
+2018-06-22 23:13:41	INFO	simobserve::Simulator::createSkyEquation() 	Fourier transforms will use image centers as tangent points
+2018-06-22 23:13:41	INFO	simobserve::VPSkyJones::VPSkyJones	PB used ALMA
+2018-06-22 23:13:41	INFO	simobserve::BeamSkyJones::summary	Beam Summary: 
+2018-06-22 23:13:41	INFO	simobserve::BeamSkyJones::summary	Model 1 for ALMA ant=-1 feed=-1 uses PB: AIRY
+2018-06-22 23:13:41	INFO	simobserve::PBMath1D::summary	Using AIRY PB Class 
+2018-06-22 23:13:41	INFO	simobserve::PBMathInterface::summary	These parameters are for Voltage Pattern
+2018-06-22 23:13:41	INFO	simobserve::PBMathInterface::summary	No Beam Squint
+2018-06-22 23:13:41	INFO	simobserve::PBMath1D::summary	Max Radius at 1 GHz: 107.04 arcmin 
+2018-06-22 23:13:41	INFO	simobserve::PBMath1DAiry::summary	   Dish Diameter: 10.7 m 
+2018-06-22 23:13:41	INFO	simobserve::PBMath1DAiry::summary	Blocked Diameter: 0.75 m 
+2018-06-22 23:13:47	INFO	simobserve::Simulator::reset() 	Resetting all visibility corruption components
+2018-06-22 23:13:47	INFO	simobserve::Simulator::reset() 	Reset all image-plane corruption components
