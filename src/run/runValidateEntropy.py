@@ -16,11 +16,11 @@ import matplotlib.pyplot as pl
 import numpy.random as rd
 
 
-simDir =  "/home/stephane/alma/ArrayConfig/imaging/fullcombination/simEntropy" 
-dataDir = "../../notebooks/data" 
-productDir = "/home/stephane/alma/ArrayConfig/imaging/fullcombination/simEntropy/products" 
+simDir =  "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy"
+dataDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data" 
+productDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/products"
 
-nsource = 300
+nsource = 3
 ntrial  = 100
 
 #### create cl #####################################################################
@@ -102,7 +102,7 @@ def randomArrayConfiguration(listPads, nants = 43):
 
 
 
-##### Main ###############################
+##### Main #########################################################################
 
 if not os.path.exists(simDir):
     os.makedirs(simDir)
@@ -120,24 +120,24 @@ pads = readPads()
 pads_4 = pads[3:103]
 arrStd = "alma.cycle5.4"
 
-for i in range(ntrial)
+for i in range(ntrial):
    
     print("### Test: %d"%(i))
     createSource()
     
     #####
-    project = arrStd
+    project = "arrTarget"
     antcfg = "%s/%s.cfg"%(dataDir,arrStd)
     inttime = "1h"
     
     simulation(antcfg, project, inttime, True)
         
-    imagename = "%s/%s/%s.noisy.image"%(simDir,project,project)
-    fitsimage = "%s/%s.image.fits.%d"%(productDir,project,i)
+    imagename = "%s/%s/%s.%s.noisy.image"%(simDir,project,project,arrStd)
+    fitsimage = "%s/%s.image.fits.%d"%(productDir,arrStd,i)
     exportfits(imagename,fitsimage,overwrite = True)
     
-    imagename = "%s/%s/%s.compskymodel.flat.regrid.conv"%(simDir,project,project)
-    fitsimage = "%s/%s.compskymodel.flat.regrid.conv.fits.%d"%(productDir,project,i)
+    imagename = "%s/%s/%s.%s.compskymodel.flat.regrid.conv"%(simDir,project,project, arrStd)
+    fitsimage = "%s/%s.compskymodel.flat.regrid.conv.fits.%d"%(productDir,arrStd,i)
     exportfits(imagename,fitsimage,overwrite = True)
     
 
@@ -145,20 +145,21 @@ for i in range(ntrial)
     project = "simRan"
     arrRan = randomArrayConfiguration(pads_4, 43)
     
-    with open("%s%d.cfg"%(project,i),"w") as f:
+    antcfg = "alma.%s%d.cfg"%(project,i)   
+    with open(antcfg,"w") as f:
         f.write(arrRan)   
     f.close()  
      
-    antcfg = "%s%d.cfg"%(project,i)
+
     inttime = "1h"
     
     simulation(antcfg, project, inttime, True)
         
-    imagename = "%s/%s/%s%d.noisy.image"%(simDir,project,project,i)
+    imagename = "%s/%s/%s.alma.%d.noisy.image"%(simDir,project,project,i)
     fitsimage = "%s/%s.image.fits.%d"%(productDir,project,i)
     exportfits(imagename,fitsimage,overwrite = True)
     
-    imagename = "%s/%s/%s%d.compskymodel.flat.regrid.conv"%(simDir,project,project,i)
+    imagename = "%s/%s/%s.alma.%s%d.compskymodel.flat.regrid.conv"%(simDir,project,project,project,i)
     fitsimage = "%s/%s.compskymodel.flat.regrid.conv.fits.%d"%(productDir,project,i)
     exportfits(imagename,fitsimage,overwrite = True)
  
