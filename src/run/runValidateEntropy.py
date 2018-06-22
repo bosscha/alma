@@ -20,7 +20,7 @@ simDir =  "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy"
 dataDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data" 
 productDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/products"
 
-nsource = 3
+nsource = 200
 ntrial  = 100
 
 #### create cl #####################################################################
