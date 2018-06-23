@@ -22,14 +22,10 @@ simDir =  "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy"
 dataDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data" 
 productDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/products"
 
-nsource = 1000
+nsource = 10
 ntrial  = 1000
 
 #### create cl #####################################################################
-
-
-    
-rd.seed(1023)
 
 def createSource():
     "Create a CL with nsource located randomly"
@@ -42,8 +38,8 @@ def createSource():
 
     al  = rd.uniform(-90.,90., nsource)
     de =  rd.uniform(-60.,60.,nsource)
-    fluxsource = rd.uniform(1e-3,100e-3,nsource)
-    diskSize = rd.uniform(0.1,15.0,nsource)   
+    fluxsource = rd.uniform(5e-3,100e-3,nsource)
+    diskSize = rd.uniform(0.1,50.0,nsource)   
     
     for i in range(nsource):
         
@@ -120,7 +116,7 @@ pads = readPads()
 
 ## For a random C32-3 we select 32 antennas in the 100 first pads
 pads_3 = pads[3:93]
-arrStd = "alma.cycle1.3"
+arrStd = "alma.cycle2.3"
 inttime = "300s"
   
 for i in range(ntrial):
@@ -146,7 +142,7 @@ for i in range(ntrial):
 
     #####
     project = "simRan"
-    arrRan = randomArrayConfiguration(pads_3, nants = 32)
+    arrRan = randomArrayConfiguration(pads_3, nants = 34)
     
     antcfg = "alma.%s%d.cfg"%(project,i)   
     with open(antcfg,"w") as f:
