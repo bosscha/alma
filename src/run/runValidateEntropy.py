@@ -16,11 +16,13 @@ import matplotlib.pyplot as pl
 import numpy.random as rd
 
 
+rd.seed()
+
 simDir =  "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy"
 dataDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data" 
 productDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/products"
 
-nsource = 100
+nsource = 1000
 ntrial  = 1000
 
 #### create cl #####################################################################

@@ -1,0 +1,51 @@
+
+2018-06-23 00:54:38	INFO	::casa	
+2018-06-23 00:54:38	INFO	::casa	CASA Version 5.1.2-4  
+2018-06-23 00:54:40	INFO	simalma::::	
+2018-06-23 00:54:40	INFO	simalma::::+	##########################################
+2018-06-23 00:54:40	INFO	simalma::::+	##### Begin Task: simalma            #####
+2018-06-23 00:54:40	INFO	simalma::::	simalma(project="arrTarget",dryrun=False,skymodel="",inbright="",indirection="",
+2018-06-23 00:54:40	INFO	simalma::::+	        incell="",incenter="",inwidth="",complist="source.cl",compwidth="200MHz",
+2018-06-23 00:54:40	INFO	simalma::::+	        setpointings=True,ptgfile="$project.ptg.txt",integration="10s",direction="",mapsize="150arcsec",
+2018-06-23 00:54:40	INFO	simalma::::+	        antennalist="/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg",hourangle="transit",totaltime="300s",tpnant=0,tptime="0s",
+2018-06-23 00:54:40	INFO	simalma::::+	        pwv=5.0,image=True,imsize=750,imdirection="",cell="0.2arcsec",
+2018-06-23 00:54:40	INFO	simalma::::+	        niter=2000,threshold="0.01mJy",graphics="both",verbose=False,overwrite=True)
+2018-06-23 00:54:40	INFO	simalma::::	Project directory, 'arrTarget', already exists.
+2018-06-23 00:54:40	INFO	simalma::::	Removing old project directory 'arrTarget'
+2018-06-23 00:54:40	INFO	simalma::simutil::	============================================================
+2018-06-23 00:54:40	INFO	simalma::simalma::	Checking the sky model
+2018-06-23 00:54:40	INFO	simalma::simutil::	 
+2018-06-23 00:54:41	INFO	simalma::simutil::	You will be simulating only from component list source.cl
+2018-06-23 00:54:41	INFO	simalma::simutil::	Based on the spatial distribution of components, a sky model image will be generated with these parameters:
+2018-06-23 00:54:41	INFO	simalma::simutil::	  image size          = 0.033935000deg
+2018-06-23 00:54:41	INFO	simalma::simutil::	  reference direction = J2000 00:40:00.12996 -049.59.59.037000
+2018-06-23 00:54:41	INFO	simalma::simutil::	and each call to simobserve will chose a skymodel cell size of 1/20 the expected PSF FWHM (to accurately locate components).
+2018-06-23 00:54:41	INFO	simalma::simutil::	Simulation from components-only produces a single channel / continuum observation
+2018-06-23 00:54:41	INFO	simalma::simutil::	  with bandwidth = 200MHz
+2018-06-23 00:54:41	INFO	simalma::simutil::	 
+2018-06-23 00:54:41	INFO	simalma::simutil::	You will be mapping an area of size 150.000000000arcsec,150.000000000arcsec
+2018-06-23 00:54:41	INFO	simalma::simutil::	  primary beam size: 58.229485058arcsec
+2018-06-23 00:54:41	INFO	simalma::simutil::	 
+2018-06-23 00:54:41	INFO	simalma::simutil::	============================================================
+2018-06-23 00:54:41	INFO	simalma::simalma::	You are requesting 1 configurations:
+2018-06-23 00:54:41	INFO	simalma::readantenna::	Reading antenna positions from '/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg'
+2018-06-23 00:54:41	INFO	simalma::readantenna::	Reading antenna positions from '/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg'
+2018-06-23 00:54:41	INFO	simalma::simutil::	  
+2018-06-23 00:54:41	INFO	simalma::simutil::	  /home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg:
+2018-06-23 00:54:41	INFO	simalma::simutil::	    12m ALMA array
+2018-06-23 00:54:41	INFO	simalma::simutil::	    This is a cycle 1 configuration
+2018-06-23 00:54:41	INFO	simalma::simutil::	    approximate synthesized beam FWHM = 2.152540 arcsec
+2018-06-23 00:54:41	INFO	simalma::simutil::	       (at zenith; the actual beam will depend on declination, hourangle, and uv coverage)
+2018-06-23 00:54:41	INFO	simalma::simutil::	    Observation time = 5.000000 min
+2018-06-23 00:54:41	INFO	simalma::simutil::	
+2018-06-23 00:54:41	INFO	simalma::simutil::	============================================================
+2018-06-23 00:54:41	INFO	simalma::simalma::	simalma calls simobserve to simulate each component:
+2018-06-23 00:54:41	INFO	simalma::simutil::	
+2018-06-23 00:54:41	WARN	simalma::simalma::	------------------------------------------------------------
+2018-06-23 00:54:41	WARN	simalma::simalma::	Step 1: simulating 12m ALMA array
+2018-06-23 00:54:41	WARN	simalma::simalma::	------------------------------------------------------------
+2018-06-23 00:54:41	INFO	simalma::simutil::	simobserve(antennalist=/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg, verbose=False, incell='', leakage=0.0, overwrite=True, calflux='0Jy', integration='10s', pointingspacing='0.510929441761PB', sdant=0, complist='source.cl', direction=[''], caldirection='', t_ground=270.0, compwidth='200MHz', sdantlist='', maptype='ALMA', graphics='both', inbright='', inwidth='', skymodel='', thermalnoise='tsys-atm', totaltime='5.000000min', hourangle='transit', ptgfile='$project.ptg.txt', obsmode='int', project='arrTarget', indirection='', user_pwv=5.0, mapsize=['150arcsec', '150arcsec'], incenter='', setpointings=True)
+2018-06-23 00:54:42	INFO	simobserve::readantenna::	Reading antenna positions from '/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg'
+2018-06-23 00:54:42	INFO	simobserve::readantenna::	Reading antenna positions from '/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data/alma.cycle1.3.cfg'
+2018-06-23 00:54:42	INFO	readantenna::::	Created Paged image 'arrTarget/arrTarget.alma.cycle1.3.compskymodel' of shape [1702, 1702, 1, 1] with float valued pixels.
+2018-06-23 00:54:43	INFO	readantenna::ComponentImager::project	Adding components to image with units [Jy/pixel.pixel]
