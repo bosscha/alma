@@ -142,7 +142,7 @@ for i in range(ntrial):
 
     #####
     project = "simRan"
-    arrRan = randomArrayConfiguration(pads_3, nants = 34)
+    arrRan = randomArrayConfiguration(pads_3, nants = 16)
     
     antcfg = "alma.%s%d.cfg"%(project,i)   
     with open(antcfg,"w") as f:
