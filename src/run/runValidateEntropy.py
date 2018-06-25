@@ -120,7 +120,7 @@ pads = readPads()
 
 ## For a random C32-3 we select 32 antennas in the 100 first pads
 pads_3 = pads[3:93]
-arrStd = "alma.cycle2.3"
+arrStd = "alma.cycle5.3"
 inttime = "300s"
   
 for i in range(ntrial):
