@@ -3,7 +3,8 @@
 ## We use the configuration C43-4 as the test case
 ## NOTE: the elongated beam is probably not checked..
 ##
-## Date: 21/6/2018
+## Date: 24/6/2018
+## 
 ################################################################
 import sys
 sys.path.append('../arrayconfiguation')
@@ -15,6 +16,7 @@ import UVW
 import matplotlib.pyplot as pl
 import numpy.random as rd
 
+from astropy.io import fits
 
 rd.seed()
 
@@ -22,8 +24,10 @@ simDir =  "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy"
 dataDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data" 
 productDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/products"
 
-nsource = 10
+nsource = 20
 ntrial  = 1000
+antmin  = 4      ## random array
+antmax  = 34     ## random array
 
 #### create cl #####################################################################
 
@@ -98,8 +102,8 @@ def randomArrayConfiguration(listPads, nants = 43):
         
     return(newArr[0:-1])
 
-
-
+    
+#####################################################################################
 ##### Main #########################################################################
 
 if not os.path.exists(simDir):
@@ -142,7 +146,8 @@ for i in range(ntrial):
 
     #####
     project = "simRan"
-    arrRan = randomArrayConfiguration(pads_3, nants = 16)
+    nantran = rd.randint(antmin,antmax)
+    arrRan  = randomArrayConfiguration(pads_3, nants = nantran)
     
     antcfg = "alma.%s%d.cfg"%(project,i)   
     with open(antcfg,"w") as f:
@@ -153,11 +158,24 @@ for i in range(ntrial):
     simulation(antcfg, project, inttime, True)
         
     imagename = "%s/%s/%s.alma.%d.noisy.image"%(simDir,project,project,i)
+    ia.open(imagename)
+    imhead(imagename=imagename, mode="add", hdkey="nants", hdvalue= nantran)
+    ia.close()
     fitsimage = "%s/%s.image.fits.%d"%(productDir,project,i)
     exportfits(imagename,fitsimage,overwrite = True)
     
+    
     imagename = "%s/%s/%s.alma.%s%d.compskymodel.flat.regrid.conv"%(simDir,project,project,project,i)
+    ia.open(imagename)
+    imhead(imagename=imagename, mode="add", hdkey="nants", hdvalue= nantran)
+    ia.close()
     fitsimage = "%s/%s.compskymodel.flat.regrid.conv.fits.%d"%(productDir,project,i)
-    exportfits(imagename,fitsimage,overwrite = True)
+    res = exportfits(imagename,fitsimage,overwrite = True)
+    
+    #with fits.open(fitsimage, mode='update') as m1:
+    #    hdr = m1[0].header
+    #    hdr.append(('nants', nantran))
+    #    m1.close()
+        
  
  
