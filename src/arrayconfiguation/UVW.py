@@ -380,7 +380,7 @@ def plotUVDist_Amp(listOfMs1,listOfMs2,label1,label2,title):
     pl.show()
     
     
-class setUVW():
+class setUVW:
     "To manipulate the visibilities of a MS"
     
     def __init__(self,visName):
