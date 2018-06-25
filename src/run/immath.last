@@ -1,7 +1,7 @@
 taskname           = "immath"
-imagename          =  ['/home/stephane/Science/alma/ArrayConfiguration/simulations/C43-6+ACA/C43-6+ACA.concat.image', '/home/stephane/Science/alma/ArrayConfiguration/simulations/C43-6+ACA/C43-6+ACA.concat.diff']
+imagename          =  ['/home/stephane/Science/ALMA/ArrayConfig/imaging/fullcombination/simulations/C43-6+ACA/C43-6+ACA.concat.image', '/home/stephane/Science/ALMA/ArrayConfig/imaging/fullcombination/simulations/C43-6+ACA/C43-6+ACA.concat.diff']
 mode               =  "evalexpr"
-outfile            =  "/home/stephane/Science/alma/ArrayConfiguration/simulations/C43-6+ACA/C43-6+ACA.concat.skymodel.flat.regrid.conv"
+outfile            =  "/home/stephane/Science/ALMA/ArrayConfig/imaging/fullcombination/simulations/C43-6+ACA/C43-6+ACA.concat.skymodel.flat.regrid.conv"
 expr               =  "IM0+IM1"
 varnames           =  ""
 sigma              =  "0.0mJy/beam"
@@ -13,4 +13,4 @@ chans              =  ""
 stokes             =  ""
 stretch            =  False
 imagemd            =  ""
-#immath(imagename=['/home/stephane/Science/alma/ArrayConfiguration/simulations/C43-6+ACA/C43-6+ACA.concat.image', '/home/stephane/Science/alma/ArrayConfiguration/simulations/C43-6+ACA/C43-6+ACA.concat.diff'],mode="evalexpr",outfile="/home/stephane/Science/alma/ArrayConfiguration/simulations/C43-6+ACA/C43-6+ACA.concat.skymodel.flat.regrid.conv",expr="IM0+IM1",varnames="",sigma="0.0mJy/beam",polithresh="",mask="",region="",box="",chans="",stokes="",stretch=False,imagemd="")
+#immath(imagename=['/home/stephane/Science/ALMA/ArrayConfig/imaging/fullcombination/simulations/C43-6+ACA/C43-6+ACA.concat.image', '/home/stephane/Science/ALMA/ArrayConfig/imaging/fullcombination/simulations/C43-6+ACA/C43-6+ACA.concat.diff'],mode="evalexpr",outfile="/home/stephane/Science/ALMA/ArrayConfig/imaging/fullcombination/simulations/C43-6+ACA/C43-6+ACA.concat.skymodel.flat.regrid.conv",expr="IM0+IM1",varnames="",sigma="0.0mJy/beam",polithresh="",mask="",region="",box="",chans="",stokes="",stretch=False,imagemd="")

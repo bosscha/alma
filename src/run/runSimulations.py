@@ -5,9 +5,9 @@ import math
 import UVW
 import matplotlib.pyplot as pl
 
-simDir = "/home/stephane/Science/alma/ArrayConfiguration/simulations"
-dataDir = "/home/stephane/Science/alma/ArrayConfiguration/master/notebooks/data"
-productDir = "/home/stephane/Science/alma/ArrayConfiguration/master/notebooks/products"
+simDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/fullcombination/simulations"
+dataDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/fullcombination/master/notebooks/data"
+productDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/fullcombination/simulations/products"
 
 def simulation(antcfg, projectname, totime ,ovrwrt= True):
     
