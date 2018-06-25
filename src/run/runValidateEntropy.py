@@ -16,18 +16,17 @@ import UVW
 import matplotlib.pyplot as pl
 import numpy.random as rd
 
-from astropy.io import fits
 
 rd.seed()
 
-simDir =  "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy"
-dataDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/master/notebooks/data" 
-productDir = "/home/stephane/Science/ALMA/ArrayConfig/imaging/entropy/simentropy/products"
+simDir =  "/home/stephane/alma/ArrayConfig/imaging/fullcombination/entropy" 
+dataDir = "/home/stephane/alma/ArrayConfig/imaging/fullcombination/master/notebooks/data" 
+productDir = "/home/stephane/alma/ArrayConfig/imaging/fullcombination/entropy/products" 
 
 nsource = 20
 ntrial  = 1000
 antmin  = 4      ## random array
-antmax  = 34     ## random array
+antmax  = 45     ## random array
 
 #### create cl #####################################################################
 
@@ -102,6 +101,16 @@ def randomArrayConfiguration(listPads, nants = 43):
         
     return(newArr[0:-1])
 
+def save_nantran(fitsimage, nant):
+    " save the nant with the fitsimage in nantran.txt"
+    
+    filenant = "%s/nantran.txt"%(productDir)
+    
+    with open(filenant,"a") as f:
+        f.write("%s %d\n"%(fitsimage, nant))
+        f.close()
+        
+                
     
 #####################################################################################
 ##### Main #########################################################################
@@ -111,6 +120,10 @@ if not os.path.exists(simDir):
     
 if not os.path.exists(productDir):
     os.makedirs(productDir)
+   
+filenant = "%s/nantran.txt"%(productDir)
+if os.path.exists(filenant):
+    os.remove(filenant)
     
 cwd = os.getcwd()
 os.chdir(simDir)
@@ -158,24 +171,18 @@ for i in range(ntrial):
     simulation(antcfg, project, inttime, True)
         
     imagename = "%s/%s/%s.alma.%d.noisy.image"%(simDir,project,project,i)
-    ia.open(imagename)
-    imhead(imagename=imagename, mode="add", hdkey="nants", hdvalue= nantran)
-    ia.close()
     fitsimage = "%s/%s.image.fits.%d"%(productDir,project,i)
+    fitsname = "%s.image.fits.%d"%(project,i)
     exportfits(imagename,fitsimage,overwrite = True)
+    save_nantran(fitsname, nantran)
     
     
     imagename = "%s/%s/%s.alma.%s%d.compskymodel.flat.regrid.conv"%(simDir,project,project,project,i)
-    ia.open(imagename)
-    imhead(imagename=imagename, mode="add", hdkey="nants", hdvalue= nantran)
-    ia.close()
     fitsimage = "%s/%s.compskymodel.flat.regrid.conv.fits.%d"%(productDir,project,i)
+    fitsname =  "%s.compskymodel.flat.regrid.conv.fits.%d"%(project,i) 
     res = exportfits(imagename,fitsimage,overwrite = True)
-    
-    #with fits.open(fitsimage, mode='update') as m1:
-    #    hdr = m1[0].header
-    #    hdr.append(('nants', nantran))
-    #    m1.close()
+    save_nantran(fitsname, nantran)
+
         
  
  
