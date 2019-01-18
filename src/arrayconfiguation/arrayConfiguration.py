@@ -108,6 +108,9 @@ HISTORY:
         - still minor bug: configuration file and project name  cannot  be  the same
         
         
+    2019.01.17:
+        -PRIVATE fork
+        
 RUN:
 
 python arrayConfiguration.py -h  (for help)
@@ -123,10 +126,11 @@ python arrayConfiguration.py -y --seven --rA 'CM03'
 NOTE that for the aos only the DV and DA antennas are included (NOT PM neither CM)
 """
 
-__version__="1.3.1@2017.05.14"
+__version__="2.0.0@2019.01.17"
 __author__ ="ALMA: SL"
 
-
+import sys
+sys.path.append('./')
 
 from optparse import OptionParser
 import arrayConfigurationTools as aC
