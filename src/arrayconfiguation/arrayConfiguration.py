@@ -110,6 +110,7 @@ HISTORY:
         
     2019.01.17:
         -PRIVATE fork
+        - comments go to git only
         
 RUN:
 
@@ -163,7 +164,7 @@ class report:
         parser.add_option("-i", "--inputfile", dest = "inputfile", 
                   help="Input file with the pad list")
         
-        parser.add_option("-t", "--type", dest = "type", default = 'ascii' ,
+        parser.add_option("-t", "--type", dest = "type", default = 'casa' ,
                   help="Input file type: ascii, casa")
         
                 
